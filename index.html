@@ -4,29 +4,45 @@
   <title>noahfiner</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link type="text/css" rel="stylesheet" href="style.css"/>
-  <style>
-  * {
-    font-family: helvetica, sans-serif;
-  }
-  li {
-    line-height: 2;
-  }
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-  <h1>Hello, I'm Noah Finer.</h1>
-  <p>This more formal landing page is in progress right now. I don't know why you're here.</p>
-  <p>Here's some random links to my works.</p>
-  <br>
-  <ul>
-    <li><a href="http://multitaskil.us">multitaskilus</a></li>
-    <li><a href="http://joannafirst.com">joanna first</a></li>
-    <li><a href="http://noahf.me">full portfolio</a></li>
-    <li><a href="http://noahfiner.github.io/Jhumpa-Simulator">jhumpa simulator</a></li>
-    <li><a href="http://noahfiner.github.io/sqar">sqar</a></li>
-    <li><a href="http://noahfiner.github.io/sqr">sqr</a></li>
-    <li><a href="http://noahfiner.github.io/xinabox">xinabox</a></li>
-    <li><a href="http://noahfiner.github.io/BRI">BRI</a></li>
-  </ul>
+  <div id="everything">
+    <div id="everything-mask">
+    </div>
+    <div id="left">
+      <div id="info">
+        <img src="img/logo.png" id="logo"/>
+        <div id="vertical-br"></div>
+        <p id="name">Noah Finer</p>
+      </div>
+      <div id="links">
+        <a id="multitaskilus" href="http://multitaskil.us">multitaskilus</a>
+        <a id="joanna" href="http://joannafirst.com">joanna first</a>
+        <a id="jhumpa" href="http://noahfiner.github.io/Jhumpa-Simulator">jhumpa simulator</a>
+        <a id="sqar" href="http://noahfiner.github.io/sqar">sqar</a>
+        <a id="sqr" href="http://noahfiner.github.io/sqr">sqr</a>
+        <a id="xinabox" href="http://noahfiner.github.io/xinabox">xinabox</a>
+        <a id="bri" href="http://noahfiner.github.io/BRI">BRI</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var images = new Array()
+    function preload() {
+      for (i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+      }
+    }
+    preload("img/multitaskilus.png",
+            "img/joanna.png",
+            "img/jhumpa.png",
+            "img/sqar.png",
+            "img/sqr.png",
+            "img/xinabox.png",
+            "img/bri.png")
+  </script>
 </body>
 </html>
