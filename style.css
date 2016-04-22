@@ -5,6 +5,12 @@
   color: white;
 }
 
+.relative-full {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
 #everything {
   background-image: url('');
   background-size: cover;
@@ -17,13 +23,23 @@
   -webkit-transition: background-image 0.25s;
 }
 
-#left {
+#left, #green-left {
   height: 100vh;
   width: 200px;
   background-color: #333;
   position: absolute;
   overflow: hidden;
   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+}
+
+#green-left {
+  box-shadow: none;
+  background-color: #1EC323;
+  transition: all 0.5s;
+}
+
+#green-left.peeking {
+  width: 250px;
 }
 
 #everything-mask {
@@ -35,33 +51,58 @@
 
 #desc-outer {
   position: absolute;
-  width: 400px;
-  height: 400px;
-  right: -200px;
-  bottom: -200px;
-  transform: rotate(-45deg);
-  background-color: #333;
-  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  bottom: 0;
+  right: 0;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-content: flex-end;
+}
+
+.angled-back {
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  background-color: #333;
+  height: 400px;
+  width: 400px;
+  transform: rotate(45deg);
+  bottom: -200px;
+  right: -200px;
+  position: absolute;
   transition: all 0.5s;
 }
 
-#desc-outer.hidden {
-  right: -400px;
+.angled-back.hidden {
   bottom: -400px;
+  right: -400px;
+}
+
+.angled-back.gray {
+  transition-delay: 0.05s;
+}
+.angled-back.gray.hidden {
+  transition-delay: 0s;
+}
+.angled-back.green {
+  background-color: #1EC323;
+  transition-delay: 0s;
+}
+.angled-back.green.hidden {
+  transition-delay: 0.05s;
 }
 
 #desc {
   color: white;
   font-size: 20px;
-  margin: 20px;
-  width: 150px;
-  transform: rotate(45deg);
-  margin-left: 30px;
-  margin-top: 30px;
   text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+#desc.hidden {
+  opacity: 0;
 }
 
 #info {

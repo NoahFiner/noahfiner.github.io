@@ -20,9 +20,21 @@ $(document).ready(function() {
     var site = links[$(this).attr("id")];
     $("#everything").css("background-image", "url('img/"+site.name+".png')");
     $("#desc").html(site.desc);
-    $("#desc-outer").removeClass("hidden");
+    $(".angled-back, #desc").removeClass("hidden");
   }, function() {
     $("#everything").css("background-image", "url('img/transparent.png')");
-    $("#desc-outer").addClass("hidden");
+    $(".angled-back, #desc").addClass("hidden");
+  });
+  $('a').click(function() {
+    $("#green-left").addClass("peeking");
+    setInterval(function() {
+      $("#green-left").addClass("peeking");
+    }, 1000);
+    setTimeout(function() {
+      $("#green-left").removeClass("peeking");
+      setInterval(function() {
+        $("#green-left").removeClass("peeking");
+      }, 1000);
+    }, 500);
   });
 });
