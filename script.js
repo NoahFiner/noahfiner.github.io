@@ -25,16 +25,4 @@ $(document).ready(function() {
     $("#everything").css("background-image", "url('img/transparent.png')");
     $(".angled-back, #desc").addClass("hidden");
   });
-  $('a').click(function() {
-    $("#green-left").addClass("peeking");
-    setInterval(function() {
-      $("#green-left").addClass("peeking");
-    }, 1000);
-    setTimeout(function() {
-      $("#green-left").removeClass("peeking");
-      setInterval(function() {
-        $("#green-left").removeClass("peeking");
-      }, 1000);
-    }, 500);
-  });
 });
