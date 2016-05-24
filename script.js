@@ -14,7 +14,8 @@ var links = {
   sqr: new Site("sqr", "The earlier, survival edition of sqar.", "noahfiner.github.io/sqar"),
   xinabox: new Site("xinabox", "A site for the xinabox Minecraft server", "noahfiner.github.io/xinabox"),
   bri: new Site("bri", "A site for Boulder Radiologists, Inc.", "noahfiner.github.io/BRI"),
-  robotics: new Site("robotics", "A site for Fairview's robotics team.", "fairviewrobotics.com")
+  robotics: new Site("robotics", "A site for Fairview's robotics team.", "fairviewrobotics.com"),
+  map: new Site("map", "An interactive map of Fairview High School.", "fairviewhs.org/map")
 };
 
 $(document).ready(function() {

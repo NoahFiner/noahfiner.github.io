@@ -17,8 +17,7 @@ body {
 
 #everything {
   background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
+  background-size: 100% 100%;
   background-color: black;
   height: 100vh;
   width: 100vw;
@@ -34,7 +33,7 @@ body {
   background-color: #333;
   position: absolute;
   overflow: hidden;
-  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #green-left {
@@ -61,7 +60,7 @@ body {
 }
 
 .angled-back {
-  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
   background-color: #333;
   height: 400px;
   width: 400px;
@@ -113,6 +112,8 @@ body {
 
 #desc.hidden {
   opacity: 0;
+  bottom: -20px;
+  right: -20px;
 }
 
 #info {
@@ -173,7 +174,4 @@ body {
   padding-left: 15px;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.05);
-}
-
-@media all and (max-width: 768px) {
 }
