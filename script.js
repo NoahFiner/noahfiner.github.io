@@ -15,7 +15,8 @@ var links = {
   xinabox: new Site("xinabox", "A site for the xinabox Minecraft server", "noahfiner.github.io/xinabox"),
   bri: new Site("bri", "A site for Boulder Radiologists, Inc.", "noahfiner.github.io/BRI"),
   robotics: new Site("robotics", "A site for Fairview's robotics team.", "fairviewrobotics.com"),
-  map: new Site("map", "An interactive map of Fairview High School.", "fairviewhs.org/map")
+  map: new Site("map", "An interactive map of Fairview High School.", "fairviewhs.org/map"),
+  justgothatway: new Site("justgothatway", "A game where you just go that way.", "justgothatway.co")
 };
 
 $(document).ready(function() {
