@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>noahfiner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="everything">
+    <div id="header">
+      <div id="info">
+        <a href="index.html">
+          <img src="img/logo.png" id="logo"/>
+        </a>
+        <div id="vertical-br"></div>
+        <div id="name-inner">
+          <p id="name">Noah Finer</p>
+          <div id="social-media">
+            <a href="http://instagram.com/noahfiner">
+              <img src="img/social/instagram.png" class="social"/>
+            </a>
+            <a href="http://github.com/noahfiner">
+              <img src="img/social/github.png" class="social"/>
+            </a>
+            <a href="http://twitter.com/rbnoahfiner">
+              <img src="img/social/twitter.png" class="social"/>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="header-links">
+        <a href="games.html" id="games-hl">GAMES</a>
+        <a href="sites.html" id="sites-hl">WEBSITES</a>
+        <a href="photos.html" id="photos-hl">PHOTOS</a>
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-inner">
+        <h1>WEB GAMES</h1>
+
+        <div class="link-outer">
+          <a id="justgothatway" href="http://justgothatway.co" target="_blank">
+            <img src="img/justgothatway.png"/>
+            <div class="info">
+              <h1>Just Go That Way</h1>
+              <h2>It shouldn't be that hard.</h2>
+              <hr>
+              <p>Just Go That Way is my most recent game which I worked on for roughly a month. In Just Go That Way I attempted a very simplistic design with fluent animations and tried to make a very simple concept as elegant as possible. I spent a long time on the design of the game, as the concept was rather simple.</p>
+            </div>
+          </a>
+          <p class="date">released on 7/7/16</p>
+          <a class="gh-link" target="_blank" href="http://github.com/noahfiner/justgothatway"><img src="img/social/github.png"/></a>
+        </div>
+
+        <div class="link-outer">
+          <a id="multitaskilus" href="http://multitaskil.us" target="_blank">
+            <img src="img/multitaskilus.png"/>
+            <div class="info">
+              <h1>multitaskilus</h1>
+              <h2>Don't relieve stress, create it!</h2>
+              <hr>
+              <p>Multitaskilus is a game I spent around a month on in which the player is presented with many tasks and little time to do them. Multitaskilus became rather popular on reddit, resulting in 1300 page views, making it my most popular game.</p>
+            </div>
+          </a>
+          <p class="date">released on 2/4/16</p>
+          <a class="gh-link" target="_blank" href="http://github.com/noahfiner/multitaskilus"><img src="img/social/github.png"/></a>
+        </div>
+
+        <div class="link-outer">
+          <a id="sqar" href="http://noahfiner.github.io/sqar" target="_blank">
+            <img src="img/sqar.png"/>
+            <div class="info">
+              <h1>sqar</h1>
+              <h2>A puzzling game with squares.</h2>
+              <hr>
+              <p>sqar was the second major game I created in which I tried various experimental design components, including material-design shadows and audio. Though it's still incomplete and playing past level 50 will crash the game, it's still fun to look at and play.</p>
+            </div>
+          </a>
+          <a class="gh-link" target="_blank" href="http://github.com/noahfiner/sqar"><img src="img/social/github.png"/></a>
+        </div>
+
+        <div class="link-outer">
+          <a id="jhumpa" href="http://noahfiner.github.io/Jhumpa-Simulator" target="_blank">
+            <img src="img/jhumpa.png"/>
+            <div class="info">
+              <h1>Jhumpa Simulator</h1>
+              <h2>A physcoanalytic LA project.</h2>
+              <hr>
+              <p>For an LA project on a choice book, in which I chose Jhumpa Lahiri's <i>Intepreter of Maladies</i>, I decided to create a video game for my LA project. In the video game, which is confusing out of context, the player takes over Jhumpa's mind as she writes her book. Though it's not incredibly fun, it was my first time experimenting with animating static images and learning CSS3 animations.</p>
+            </div>
+          </a>
+          <p class="date">released on 4/28/16</p>
+          <a class="gh-link" target="_blank" href="http://github.com/noahfiner/Jhumpa-Simulator"><img src="img/social/github.png"/></a>
+        </div>
+
+        <div class="link-outer">
+          <a id="sqr" href="http://noahfiner.github.io/sqr" target="_blank">
+            <img src="img/sqr.png"/>
+            <div class="info">
+              <h1>sqr</h1>
+              <h2>My first game.</h2>
+              <hr>
+              <p>sqr isn't exactly fun, it's most likely broken on any browser other than chrome, and its code is very ugly, but it was my first time experimenting with game creation and making something partially fun. Sqar builds on this game.</p>
+            </div>
+          </a>
+          <p class="date">released on 3/2/15</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var images = new Array()
+    function preload() {
+      for (i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+      }
+    }
+    preload("img/multitaskilus.png",
+            "img/joanna.png",
+            "img/jhumpa.png",
+            "img/sqar.png",
+            "img/sqr.png",
+            "img/xinabox.png",
+            "img/bri.png",
+            "img/map.png",
+            "img/robotics.png")
+  </script>
+</body>
+</html>

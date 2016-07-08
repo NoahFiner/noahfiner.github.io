@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>noahfiner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="everything">
+    <div id="header">
+      <div id="info">
+        <a href="index.html">
+          <img src="img/logo.png" id="logo"/>
+        </a>
+        <div id="vertical-br"></div>
+        <div id="name-inner">
+          <p id="name">Noah Finer</p>
+          <div id="social-media">
+            <a href="http://instagram.com/noahfiner">
+              <img src="img/social/instagram.png" class="social"/>
+            </a>
+            <a href="http://github.com/noahfiner">
+              <img src="img/social/github.png" class="social"/>
+            </a>
+            <a href="http://twitter.com/rbnoahfiner">
+              <img src="img/social/twitter.png" class="social"/>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="header-links">
+        <a href="games.html" id="games-hl">GAMES</a>
+        <a href="sites.html" id="sites-hl">WEBSITES</a>
+        <a href="photos.html" id="photos-hl">PHOTOS</a>
+      </div>
+    </div>
+    <div id="content">
+      <div id="content-inner">
+        <h1>WEBSITES</h1>
+        <div class="link-outer">
+          <a id="robotics" href="http://fairviewrobotics.com" target="_blank">
+            <img src="img/robotics.png"/>
+            <div class="info">
+              <h1>Fairview Robotics</h1>
+              <h2>A website for the Black Knights.</h2>
+              <hr>
+              <p>I received the job to complete my school's incomplete robotics website. In the site I implemented an advanced JavaScript gallery, smooth parallaxes, and much more. It was also my first time using flexbox.</p>
+            </div>
+          </a>
+          <p class="date">released on 5/24/16</p>
+          <a class="gh-link" target="_blank" href="https://github.com/fairviewrobotics/fairviewrobotics.github.io"><img src="img/social/github.png"/></a>
+        </div>
+
+        <div class="link-outer">
+          <a id="map" href="http://fairviewhs.org/map" target="_blank">
+            <img src="img/map.png"/>
+            <div class="info">
+              <h1>Fairview Map</h1>
+              <h2>An interactive map of Fairview High School.</h2>
+              <hr>
+              <p>I came up with the idea to create an interactive map of my highschool after getting lost in it a lot. I spent three months creating an interactive map of my school, in which I experimented with subtle textures and a simple JavaScript search. Though the code is not pretty at all and it's very slow, I believe it's an impressive piece of work based on my coding skills at the time.</p>
+            </div>
+          </a>
+          <p class="date">released on 9/26/15</p>
+        </div>
+
+        <div class="link-outer">
+          <a id="joanna" href="http://joannafirst.com" target="_blank">
+            <img src="img/joanna.png"/>
+            <div class="info">
+              <h1>Joanna First</h1>
+              <h2>A website and gallery for the artist Joanna First.</h2>
+              <hr>
+              <p>My grandmother always needed a website, so I built her one. I experimented with subtle textures, logo design, and an alternative header in the site. It was also my first time creating an interactive JavaScript gallery.</p>
+            </div>
+          </a>
+          <p class="date">released on 8/7/15</p>
+          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/joannafirst"><img src="img/social/github.png"/></a>
+        </div>
+
+        <div class="link-outer">
+          <a id="xinabox" href="http://noahfiner.github.io/xinabox" target="_blank">
+            <img src="img/xinabox.png"/>
+            <div class="info">
+              <h1>xinabox</h1>
+              <h2>An incomplete website for a Minecraft server.</h2>
+              <hr>
+              <p>xinabox, a friend of mine, wanted a website for his Minecraft server, but unfortunately never gave me any content. The site remains incomplete and scattered with filler text, but I tried an image-heavy design, sleek border animations, and multiple carousels.</p>
+            </div>
+          </a>
+          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/xinabox"><img src="img/social/github.png"/></a>
+        </div>
+
+        <div class="link-outer">
+          <a id="bri" href="http://noahfiner.github.io/BRI" target="_blank">
+            <img src="img/bri.png"/>
+            <div class="info">
+              <h1>BRI</h1>
+              <h2>An incomplete website for a Radiology group.</h2>
+              <hr>
+              <p>BRI was the first real site I was hired to create. It contains a lot of old designs and could be greatly improved, but it still is a decent website.</p>
+            </div>
+          </a>
+          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/BRI"><img src="img/social/github.png"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var images = new Array()
+    function preload() {
+      for (i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+      }
+    }
+    preload("img/multitaskilus.png",
+            "img/joanna.png",
+            "img/jhumpa.png",
+            "img/sqar.png",
+            "img/sqr.png",
+            "img/xinabox.png",
+            "img/bri.png",
+            "img/map.png",
+            "img/robotics.png")
+  </script>
+</body>
+</html>
