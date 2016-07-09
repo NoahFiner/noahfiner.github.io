@@ -134,7 +134,7 @@ body {
   text-decoration: none;
   height: 100%;
   padding-top: 70px;
-  width: auto;
+  width: 200px;
   padding-left: 70px;
   padding-right: 15px;
   font-size: 30px;
@@ -305,5 +305,5 @@ a {
 }
 
 .gh-link:hover {
-  opacity: 0.75;
+  opacity: 1;
 }
