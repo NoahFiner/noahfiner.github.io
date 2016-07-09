@@ -194,7 +194,7 @@ body {
   width: auto;
   float: left;
   clear: left;
-  font-size: 35px;
+  font-size: 3vw;
 }
 
 .pretty-intro-link {
@@ -211,7 +211,7 @@ body {
 
 .intro > div > h1 {
   margin-bottom: 0 !important;
-  font-size: 100px;
+  font-size: 8vw;
 }
 
 .intro {
