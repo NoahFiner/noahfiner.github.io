@@ -19,16 +19,16 @@
 //   justgothatway: new Site("justgothatway", "A game where you just go that way.", "justgothatway.co")
 // };
 //
-// $(document).ready(function() {
-//   $('a').hover(function() {
-//     $(this).addClass("hover");
-//     var site = links[$(this).attr("id")];
-//     $("#everything").css("background-image", "url('img/"+site.name+".png')");
-//     $("#desc").html(site.desc);
-//     $(".angled-back, #desc").removeClass("hidden");
-//   }, function() {
-//     $(this).removeClass("hover");
-//     $("#everything").css("background-image", "url('img/transparent.png')");
-//     $(".angled-back, #desc").addClass("hidden");
-//   });
-// });
+var height = window.innerHeight;
+
+$(document).ready(function() {
+  $(window).resize(function() {
+    height = window.innerHeight;
+  });
+});
+
+$(window).scroll(function() {
+  scroll = $(window).scrollTop();
+  var bottom = height/4;
+  $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-bottom)/height) + 1)+".jpg')");
+});

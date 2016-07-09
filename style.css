@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import 'https://fonts.googleapis.com/css?family=Lato:300,300i,400';
 
 * {
   margin: 0;
@@ -21,8 +22,7 @@ body {
 #everything {
   background-image: url('');
   background-size: 100% 100%;
-  background-color: #1EC322;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -172,7 +172,6 @@ body {
   margin-top: 100px;
   height: auto;
   min-height: calc(100vh - 100px);
-  background-color: #1EC322;
   width: 100vw;
 }
 
@@ -189,8 +188,66 @@ body {
   margin: 0;
 }
 
+.intro > div > h1, .intro > div > p {
+  padding: 0 10px;
+  background-color: #1EC322;
+  width: auto;
+  float: left;
+  clear: left;
+  font-size: 35px;
+}
+
+.pretty-intro-link {
+  text-decoration: none;
+  border: 0 !important;
+  opacity: 0.75;
+  transition: opacity 0.25s !important;
+}
+
+.pretty-intro-link:hover {
+  opacity: 1;
+  background-color: transparent !important;
+}
+
+.intro > div > h1 {
+  margin-bottom: 0 !important;
+  font-size: 100px;
+}
+
+.intro {
+  z-index: 1;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.intro-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+#parallax-background {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('photography/intro1.jpg');
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  transition: background-image 0.5s;
+}
+
+#parallax-mask {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1EC322;
+  opacity: 0.25;
+}
+
 #text-content > h1 {
-  font-size: 50px !important;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
@@ -268,6 +325,8 @@ a {
 
 .info > p {
   font-size: 15px;
+  font-weight: 100;
+  font-family: "Lato", "Montserrat", sans-serif;
 }
 
 .info > hr {

@@ -38,10 +38,37 @@
       </div>
     </div>
     <div id="content">
-      <div id="text-content">
-        <h1>I'm Noah Finer.</h1>
-        <p>I make stuff on the web and take pictures of my lizards.</p>
-        <p>I'm still working on this page, but the other ones are mostly complete.</p>
+      <div id="parallax-background"></div>
+      <div id="parallax-mask"></div>
+      <div id="text-content" class="intro">
+        <div class="intro-section">
+          <h1 style="margin-top: 100px">I'M NOAH FINER</h1>
+          <p>I make stuff on the web and</p>
+          <p>take pictures of my lizards and other objects.</p>
+        </div>
+        <div class="intro-section">
+          <h1>WEB DEVELOPMENT</h1>
+          <p>I'm in high school, so I'm a bit of an amatuer.</p>
+          <p>But I still make <a class="pretty-intro-link" href="games.html" target="_blank">web games</a> and <a class="pretty-intro-link" href="sites.html" target="_blank">websites</a>.</p>
+        </div>
+        <div class="intro-section">
+          <h1>PHOTOGRAPHY</h1>
+          <p>I've had a camera for a long time</p>
+          <p>and I later took a photography class.</p>
+          <p>Now I take a lot of <a class="pretty-intro-link" href="http://instagram.com/noahfiner" target="_blank">photos</a></p>
+        </div>
+        <div class="intro-section">
+          <h1>LIZARDS</h1>
+          <p>I have two lizards that are both named Spiky.</p>
+          <p>This is Spiky1. He's a six-year-old bearded dragon.</p>
+          <p>I made a lot of videos of him when I was younger.</p>
+        </div>
+        <div class="intro-section">
+          <h1>LIZARDS (cont.)</h1>
+          <p>Here is Spiky2.</p>
+          <p>Spiky2 is a crested gecko of around seven years.</p>
+          <p>He is a good bit smaller than Spiky1.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -53,15 +80,13 @@
         images[i].src = preload.arguments[i]
       }
     }
-    preload("img/multitaskilus.png",
-            "img/joanna.png",
-            "img/jhumpa.png",
-            "img/sqar.png",
-            "img/sqr.png",
-            "img/xinabox.png",
-            "img/bri.png",
-            "img/map.png",
-            "img/robotics.png")
+    preload(
+      "photography/intro1.jpg",
+      "photography/intro2.jpg",
+      "photography/intro3.jpg",
+      "photography/intro4.jpg",
+      "photography/intro5.jpg"
+      )
   </script>
 </body>
 </html>
