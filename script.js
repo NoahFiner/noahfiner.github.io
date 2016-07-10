@@ -26,10 +26,10 @@ $(document).ready(function() {
     height = window.innerHeight;
   });
   for(var i = 2; i < 5; i++) {
-    for(var j = 0; j < 10; j++) {
-      var elemWidth = Math.floor(Math.random()*500+1);
-      var elemHeight = Math.floor(Math.random()*500+1);
-      var heightMultiplier = 0.5;
+    for(var j = 0; j < 15; j++) {
+      var elemWidth = Math.floor(Math.random()*200+10);
+      var elemHeight = Math.floor(Math.random()*200+10);
+      var heightMultiplier = 1.2;
       $("#parallax-back"+i).append("<div style='height: "+elemHeight+"px; width: "+elemWidth+"px; top: "+(Math.floor(Math.random()*(($("#parallax-back"+i).height()*heightMultiplier)))-(elemHeight/2))+"px; left: "+(Math.floor(Math.random()*(($("#parallax-back"+i).width())))-(elemWidth/2))+"px'></div>");
     }
   }
@@ -38,8 +38,12 @@ $(document).ready(function() {
 $(window).scroll(function() {
   scroll = $(window).scrollTop();
   var bottom = $("#tex-content").height()/4;
-  $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-bottom)/height) + 1)+".jpg')");
-  $("#parallax-back2").css("top", -(scroll/1.5)+"px");
-  $("#parallax-back3").css("top", -(scroll/3)+"px");
-  $("#parallax-back4").css("top", -(scroll/6)+"px");
+  if(Math.ceil((scroll-bottom)/height) <= 1) {
+    $("#parallax-background").css("background-image", "url('photography/intro1.jpg')");
+  } else {
+    $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-bottom)/height) + 1)+".jpg')");
+  }
+  $("#parallax-back2").css("top", -(scroll/1.25)+"px");
+  $("#parallax-back3").css("top", -(scroll/1.5)+"px");
+  $("#parallax-back4").css("top", -(scroll/2)+"px");
 });
