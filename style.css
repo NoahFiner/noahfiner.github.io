@@ -10,7 +10,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #1EC322;
+  background-color: #444;
 }
 
 .relative-full {
@@ -243,6 +243,10 @@ body {
   opacity: 0.2;
 }
 
+#parallax-back1, #parallax-back2 {
+  z-index: 1;
+}
+
 #parallax-background {
   position: fixed;
   height: 100vh;
@@ -273,7 +277,7 @@ body {
   margin: 0;
   height: auto;
   width: 100vw;
-  background-color: #68DC68;
+  background-color: #1EC322;
 }
 
 a {

@@ -25,9 +25,9 @@ $(document).ready(function() {
   $(window).resize(function() {
     height = window.innerHeight;
   });
-  for(var i = 2; i < 5; i++) {
-    for(var j = 0; j < 15; j++) {
-      var elemWidth = Math.floor(Math.random()*200+10);
+  for(var i = 1; i < 7; i++) {
+    for(var j = 0; j < 10; j++) {
+      var elemWidth = Math.floor(Math.random()*150+10);
       var elemHeight = Math.floor(Math.random()*200+10);
       var heightMultiplier = 1.2;
       $("#parallax-back"+i).append("<div style='height: "+elemHeight+"px; width: "+elemWidth+"px; top: "+(Math.floor(Math.random()*(($("#parallax-back"+i).height()*heightMultiplier)))-(elemHeight/2))+"px; left: "+(Math.floor(Math.random()*(($("#parallax-back"+i).width())))-(elemWidth/2))+"px'></div>");
@@ -43,7 +43,9 @@ $(window).scroll(function() {
   } else {
     $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-bottom)/height) + 1)+".jpg')");
   }
-  $("#parallax-back2").css("top", -(scroll/1.25)+"px");
-  $("#parallax-back3").css("top", -(scroll/1.5)+"px");
-  $("#parallax-back4").css("top", -(scroll/2)+"px");
+  $("#parallax-back1").css("top", -(scroll/0.35)+"px");
+  $("#parallax-back2").css("top", -(scroll/0.75)+"px");
+  $("#parallax-back3").css("top", -(scroll/1)+"px");
+  $("#parallax-back4").css("top", -(scroll/1.25)+"px");
+  $("#parallax-back5").css("top", -(scroll/1.5)+"px");
 });
