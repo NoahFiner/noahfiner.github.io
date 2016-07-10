@@ -124,7 +124,8 @@ body {
 #header-links {
   height: 100%;
   width: auto;
-  float: right;
+  position: absolute;
+  right: 0;
   display: flex;
   align-items: center;
 }
@@ -225,6 +226,20 @@ body {
   height: 100vh;
   position: relative;
   margin: 0;
+}
+
+.parallax-back {
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+}
+
+.parallax-back > div {
+  position: absolute;
+  background-color: #1EC322;
+  opacity: 0.2;
 }
 
 #parallax-background {
