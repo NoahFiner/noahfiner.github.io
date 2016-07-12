@@ -8,11 +8,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="script.js"></script>
 </head>
-<body>
+<body class="loading">
   <div id="everything">
+    <div id="loading-outer">
+      <div id="loading-back"></div>
+      <div id="loading-main" class="index"></div>
+    </div>
     <div id="header">
       <div id="info">
-        <a href="index.html">
+        <a class="local-link l-index" id="index">
           <img src="img/logo.png" id="logo"/>
         </a>
         <div id="vertical-br"></div>
@@ -32,9 +36,9 @@
         </div>
       </div>
       <div id="header-links">
-        <a href="games.html" id="games-hl">GAMES</a>
-        <a href="sites.html" id="sites-hl">WEBSITES</a>
-        <a href="photos.html" id="photos-hl">PHOTOS</a>
+        <a class="local-link l-games" id="games">GAMES</a>
+        <a class="local-link l-sites" id="sites">WEBSITES</a>
+        <a class="local-link l-photos" id="photos">PHOTOS</a>
       </div>
     </div>
     <div id="content">
@@ -59,7 +63,7 @@
         <div class="intro-section">
           <h1>WEBSITES</h1>
           <p>I'm in high school, so I'm a bit of an amatuer.</p>
-          <p>But I still make <a class="pretty-intro-link" href="games.html">web games</a> and <a class="pretty-intro-link" href="sites.html">websites</a>.</p>
+          <p>But I still make <a class="pretty-intro-link local-link l-games">web games</a> and <a class="pretty-intro-link local-link l-sites">websites</a>.</p>
         </div>
         <div class="intro-section">
           <h1>PHOTOS</h1>

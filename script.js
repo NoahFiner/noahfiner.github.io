@@ -21,7 +21,41 @@
 //
 var height = window.innerHeight;
 
+var goToPage = function(page) {
+  $(".local-link").css("pointer-events", "none");
+  $("#loading-outer").css("display", "block");
+  $("#loading-main").removeClass("index photos sites games");
+  $("#loading-main").addClass(page);
+  $("#loading-back, #loading-main").addClass("leave-page");
+  setTimeout(function() {
+    $("#loading-back, #loading-main").removeClass("down");
+    $("body").addClass("loading");
+  }, 10);
+  setTimeout(function() {
+    location.href = (page+".html");
+  }, 1000);
+};
+
 $(document).ready(function() {
+  $(".local-link").click(function() {
+    var lastClass = $(this).attr('class').split(' ').pop();
+    goToPage(lastClass.substr(2, lastClass.length));
+  });
+
+  setTimeout(function() {
+    $("#loading-main, #loading-back").addClass("up");
+    $("body").removeClass("loading");
+    setTimeout(function() {
+      $("#loading-back, #loading-main").attr("style", "transition: all 1ms");
+      $("#loading-back, #loading-main").addClass("down");
+      $("#loading-main, #loading-back").removeClass("up");
+      setTimeout(function() {
+        $("#loading-outer").css("display", "none");
+        $("#loading-back, #loading-main").attr("style", "transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);");
+      }, 10);
+    }, 600);
+  }, 250);
+
   $(window).resize(function() {
     height = window.innerHeight;
   });
@@ -43,7 +77,7 @@ $(window).scroll(function() {
   } else {
     $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-bottom)/height) + 1)+".jpg')");
   }
-  $("#parallax-back1").css("top", -(scroll/0.35)+"px");
+  $("#parallax-back1").css("top", -(scroll/0.5)+"px");
   $("#parallax-back2").css("top", -(scroll/0.75)+"px");
   $("#parallax-back3").css("top", -(scroll/1)+"px");
   $("#parallax-back4").css("top", -(scroll/1.25)+"px");
