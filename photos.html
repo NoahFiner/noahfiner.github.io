@@ -6,6 +6,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link type="text/css" rel="stylesheet" href="style.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="gallery.js"></script>
   <script src="script.js"></script>
 </head>
 <body>
@@ -41,31 +42,21 @@
         <a class="local-link l-photos" id="photos">PHOTOS</a>
       </div>
     </div>
+    <div id="image-full-outer" class="hidden">
+      <a id="image-full-close" onclick="showImage('', false)">CLOSE</a>
+      <a id="image-full-left" class="full-arrow" onclick="decrementImage()">&lang;</a>
+      <a id="image-full-right" class="full-arrow" onclick="incrementImage()">&rang;</a>
+      <img src="photography/loading.jpg" class="image-full"/>
+    </div>
     <div id="content">
-      <div id="text-content">
-        <h1>PHOTOGRAPHY</h1>
-        <p>On top of web development I take pictures.</p>
-        <p>I haven't finished this page yet, so just check out <a href="http://instagram.com/noahfiner">my Instagram.</a></p>
+      <div id="content-inner">
+        <h1>PHOTOS</h1>
+        <div id="gallery-header">
+          <a class="gallery-selector selected" id="all-photos">all photos</a>
+        </div>
+        <div id="gallery-content"></div>
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    var images = new Array()
-    function preload() {
-      for (i = 0; i < preload.arguments.length; i++) {
-        images[i] = new Image()
-        images[i].src = preload.arguments[i]
-      }
-    }
-    preload("img/multitaskilus.png",
-            "img/joanna.png",
-            "img/jhumpa.png",
-            "img/sqar.png",
-            "img/sqr.png",
-            "img/xinabox.png",
-            "img/bri.png",
-            "img/map.png",
-            "img/robotics.png")
-  </script>
 </body>
 </html>
