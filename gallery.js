@@ -14,7 +14,7 @@ var imageTags = [ //line refers to (linecount - 2).jpg
   ["macro", "abstract"],
   ["spiky1"],
   ["spiky1"],
-  ["spiky1"],
+  ["landscape", "long exposure"],
   ["macro"],
   ["spiky1"],
   ["spiky1"],
