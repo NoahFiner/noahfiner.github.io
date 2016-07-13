@@ -126,7 +126,54 @@ var imageTags = [ //line refers to (linecount - 2).jpg
   ["spiky2"],
   ["spiky2"],
   ["landscape"],
-  ["landscape", "abstract"]
+  ["landscape", "abstract"],
+  ["landscape", "national parks", "arches"],
+  ["landscape", "national parks", "ruins"],
+  ["landscape", "national parks", "arches"],
+  ["landscape", "national parks", "ruins"],
+  ["landscape", "national parks"],
+  ["landscape", "national parks", "arches"],
+  ["landscape", "national parks"],
+  ["landscape", "national parks"],
+  ["landscape", "national parks"],
+  ["landscape", "national parks", "arches"],
+  ["flowers", "macro"],
+  ["landscape", "national parks"],
+  ["national parks"],
+  ["landscape", "national parks"],
+  ["national parks", "ruins"],
+  ["landscape", "national parks"],
+  ["national parks"],
+  ["national parks", "landscape"],
+  ["landscape", "national parks", "ruins"],
+  ["national parks", "landscape"],
+  ["national parks", "landscape"],
+  ["national parks", "landscape"],
+  ["national parks", "landscape"],
+  ["national parks", "abstract"],
+  ["national parks", "landscape", "arches"],
+  ["national parks", "landscape", "arches"],
+  ["national parks", "landscape", "arches"],
+  ["national parks", "landscape", "arches"],
+  ["national parks", "landscape"],
+  ["flowers", "macro"],
+  ["national parks", "landscape"],
+  ["macro", "flowers"],
+  ["national parks", "ruins"],
+  ["national parks", "landscape", "arches"],
+  ["national parks", "landscape"],
+  ["national parks", "landscape"],
+  ["macro", "flowers"],
+  ["national parks", "landscape"],
+  ["macro", "flowers"],
+  ["national parks", "landscape", "arches"],
+  ["national parks", "landscape", "arches"],
+  ["national parks", "landscape"],
+  ["national parks", "landscape", "ruins"],
+  ["national parks", "landscape"],
+  ["national parks", "ruins", "macro"],
+  ["national parks", "ruins"],
+  ["national parks", "macro"]
 ];
 
 var galleryResetTimeout;
@@ -145,7 +192,7 @@ var Image = function(num, tags) {
   this.thumb_url = "thumbnails/"+num+".jpg";
 };
 
-for(var i = 0; i < imageTags.length - 1; i++) {
+for(var i = 0; i < imageTags.length; i++) {
   images.push(new Image(i, imageTags[i]));
 }
 
