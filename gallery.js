@@ -147,7 +147,7 @@ var imageTags = [ //line refers to (linecount - 2).jpg
   ["national parks", "landscape", "colorado"],
   ["landscape", "national parks", "colorado"],
   ["national parks", "landscape", "colorado"],
-  ["national parks", "landscape", "colorado"],
+  ["national parks", "landscape", "utah"],
   ["national parks", "landscape", "colorado"],
   ["national parks", "landscape", "colorado"],
   ["national parks", "abstract", "utah"],
