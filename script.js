@@ -21,7 +21,8 @@
 //
 var height = window.innerHeight;
 
-var goToPage = function(page) {
+var goToPage = function(page, hash) {
+  var urlHash = hash || 0;
   $(".local-link").css("pointer-events", "none");
   $("#loading-outer").css("display", "block");
   $("#loading-main").removeClass("index photos sites games");
@@ -32,14 +33,23 @@ var goToPage = function(page) {
     $("body").addClass("loading");
   }, 10);
   setTimeout(function() {
-    location.href = (page+".html");
+    if(urlHash) {
+      location.href = (page+".html"+urlHash);
+    } else {
+      location.href = (page+".html");
+    }
   }, 1000);
 };
 
 $(document).ready(function() {
   $(".local-link").click(function() {
     var lastClass = $(this).attr('class').split(' ').pop();
-    goToPage(lastClass.substr(2, lastClass.length));
+    var firstClass = $(this).attr('class').split(' ')[0];
+    if(firstClass[0] === "#") {
+      goToPage(lastClass.substr(2, lastClass.length), firstClass);
+    } else {
+      goToPage(lastClass.substr(2, lastClass.length));
+    }
   });
 
   setTimeout(function() {
@@ -71,11 +81,11 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
   scroll = $(window).scrollTop();
-  var bottom = $("#tex-content").height()/4;
-  if(Math.ceil((scroll-bottom)/height) <= 1) {
+  var offset = 100;
+  if(Math.ceil((scroll-offset)/height) <= 1) {
     $("#parallax-background").css("background-image", "url('photography/intro1.jpg')");
   } else {
-    $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-bottom)/height) + 1)+".jpg')");
+    $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-offset)/height) + 1)+".jpg')");
   }
   $("#parallax-back1").css("top", -(scroll/0.5)+"px");
   $("#parallax-back2").css("top", -(scroll/0.75)+"px");
