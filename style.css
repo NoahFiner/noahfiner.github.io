@@ -88,9 +88,15 @@ body.loading {
   margin: 0;
   opacity: 0.5;
   text-transform: uppercase;
-  margin-left: 2.5px;
+  text-decoration: none;
+  margin-left: 1px;
   text-align: left;
   display: block;
+  transition: opacity 0.25s;
+}
+
+#name:hover {
+  opacity: 1;
 }
 
 .social-media {
@@ -703,7 +709,7 @@ a {
   margin-top: 20px;
 }
 
-#footer-name-outer > .l-index {
+#footer-name-outer > .l-index:not(#footer-name) {
   width: 75px;
   height: 75px;
   margin-top: -12.5px;
