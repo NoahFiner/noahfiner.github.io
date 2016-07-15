@@ -325,7 +325,7 @@ $(document).ready(function() {
   });
 
   for(i = 0; i < uniqueTags.length; i++) {
-    $("#gallery-header").append("<a class='gallery-selector' id='"+uniqueTags[i]+"'>"+uniqueTags[i]+"</a>");
+    $("#gallery-header").append("<a class='gallery-selector' id='"+uniqueTags[i].replace(" ", "-")+"'>"+uniqueTags[i]+"</a>");
   }
 
   if(hasTags(hash) && hash !== "") {

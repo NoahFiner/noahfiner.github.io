@@ -22,6 +22,7 @@
 var height = window.innerHeight;
 var mobileHoverTimeout;
 var mobileHeaderDelay = 50;
+var amountOfIntroSquares = 10;
 
 var goToPage = function(page, hash) {
   var urlHash = hash || 0;
@@ -52,6 +53,7 @@ $(document).ready(function() {
 
   if(touchscreenCheck()) {
     mobileHeaderDelay = 250;
+    amountOfIntroSquares = 4;
   }
 
   $("#hamburger-outer").click(function() {
@@ -115,7 +117,7 @@ $(document).ready(function() {
     height = window.innerHeight;
   });
   for(var i = 1; i < 7; i++) {
-    for(var j = 0; j < 10; j++) {
+    for(var j = 0; j < amountOfIntroSquares; j++) {
       var elemWidth = Math.floor(Math.random()*150+10);
       var elemHeight = Math.floor(Math.random()*200+10);
       var heightMultiplier = 1.2;
