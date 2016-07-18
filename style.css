@@ -777,7 +777,6 @@ a {
   opacity: 0.75;
   padding: 2.5px;
   display: block;
-  text-decoration: underline;
   transition: opacity 0.25s;
 }
 
