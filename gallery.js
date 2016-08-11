@@ -1,8 +1,8 @@
 var imageTags = [ //line refers to (linecount - 2).jpg
   ["macro", "flowers"],
-  ["hdr", "long exposure", "landscape"],
+  ["abstract", "minimal"],
   ["landscape"],
-  ["macro", "flowers"],
+  ["long exposure", "landscape"],
   ["spiky1"],
   ["macro", "flowers"],
   ["spiky1"],
@@ -173,7 +173,65 @@ var imageTags = [ //line refers to (linecount - 2).jpg
   ["national parks", "landscape", "utah"],
   ["national parks", "colorado", "macro"],
   ["national parks", "colorado"],
-  ["national parks", "macro"]
+  ["national parks", "macro"],
+  ["flowers", "minimal", "macro"],
+  ["landscape", "hdr", "long exposure"],
+  ["macro", "spiky2"],
+  ["hdr", "long exposure", "landscape"],
+  ["long exposure", "landscape"],
+  ["long exposure", "landscape"],
+  ["long exposure"],
+  ["long exposure", "night", "beach", "landscape", "abstract"],
+  ["long exposure", "landscape"],
+  ["macro", "abstract"],
+  ["macro", "abstract"],
+  ["macro", "minimal", "flowers"],
+  ["macro", "minimal", "flowers"],
+  ["long exposure", "landscape"],
+  ["sunset", "beach", "landscape"],
+  ["flowers", "macro", "minimal"],
+  ["long exposure", "landscape"],
+  ["flowers", "macro", "minimal"],
+  ["spiky2"],
+  ["long exposure", "landscape"],
+  ["spiky1"],
+  ["spiky2"],
+  ["landscape"],
+  ["landscape", "reflections"],
+  ["beach", "abstract"],
+  ["long exposure", "landscape"],
+  ["spiky2"],
+  ["spiky1", "spiky2"],
+  ["long exposure", "landscape", "beach"],
+  ["long exposure", "landscape", "beach", "sunset"],
+  ["long exposure"],
+  ["spiky2"],
+  ["spiky2", "spiky1"],
+  ["spiky2"],
+  ["long exposure", "beach", "sunset"],
+  ["beach", "animals"],
+  ["long exposure", "beach", "sunset", "landscape"],
+  ["spiky1"],
+  ["beach", "animals"],
+  ["spiky1"],
+  ["beach", "long exposure"],
+  ["beach", "long exposure"],
+  ["spiky1"],
+  ["night", "long exposure"],
+  ["spiky1"],
+  ["beach", "long exposure", "landscape"],
+  ["minimal", "abstract"],
+  ["long exposure", "beach"],
+  ["minimal", "abstract"],
+  ["beach", "macro", "animals"],
+  ["animals"],
+  ["abstract", "minimal"],
+  ["minimal", "sunset"],
+  ["abstract", "reflections"],
+  ["abstract", "macro"],
+  ["night", "landscape"],
+  ["night", "landscape"],
+  ["night", "landscape", "reflections"]
 ];
 
 var galleryResetTimeout;
@@ -272,7 +330,7 @@ var resetGallery = function(tags) {
   galleryResetTimeout = setTimeout(function() {
     for(i = 0; i <= images.length - 1; i++) {
       if(hasTags(images[i].tags) || tags === '') {
-        $("#gallery-content").append(
+        $("#gallery-content").prepend(
             '<div class="image-thumb-outer">' +
               '<img class="image-thumb" height="100px" width="auto" src="photography/'+i+'.jpg"/>' +
             '</div>');
@@ -343,13 +401,15 @@ $(document).ready(function() {
           showImage("", false);
           break;
 
+        //images are sorted bigger#.jpg -> smaller#.jpg
+
         case 37: // left
-          decrementImage();
+          incrementImage();
           e.preventDefault();
           break;
 
         case 39: // right
-          incrementImage();
+          decrementImage();
           e.preventDefault();
           break;
       }
