@@ -369,7 +369,7 @@ body.loading {
   height: 100vh;
   width: 100vw;
   background-color: #1EC322;
-  opacity: 0.25;
+  opacity: 0;
 }
 
 #text-content > h1 {
@@ -724,6 +724,7 @@ a {
 }
 
 #footer-outer {
+  z-index: 1000;
   height: 250px;
   width: 100vw;
   margin-top: 100px;
