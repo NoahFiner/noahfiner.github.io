@@ -95,7 +95,23 @@ var imageTags = [ //line refers to (linecount - 2).jpg
   ["macro"],
   ["sunset", "long exposure", "photoshop"],
   ["astro", "photoshop", "long exposure", "favorites"],
-  ["astro", "photoshop", "long exposure", "milky way", "favorites"]
+  ["astro", "photoshop", "long exposure", "milky way", "favorites"],
+  ["astro", "photoshop", "long exposure", "milky way", "favorites"],
+  ["astro", "long exposure", "landscape"],
+  ["astro", "photoshop", "long exposure", "milky way"],
+  ["astro", "photoshop", "long exposure", "milky way", "favorites"],
+  ["macro", "minimal", "abstract"],
+  ["macro", "minimal"],
+  ["astro", "photoshop", "long exposure", "milky way"],
+  ["landscape"],
+  ["landscape", "astro", "long exposure", "favorites", "photoshop"],
+  ["abstract", "long exposure"],
+  ["abstract", "long exposure"],
+  ["abstract", "long exposure", "favorites"],
+  ["abstract", "long exposure", "favorites"],
+  ["astro", "photoshop", "long exposure", "milky way", "favorites", "landscape"],
+  ["landscape", "photoshop", "long exposure", "favorites"],
+  ["landscape", "fall", "photoshop", "favorites"]
 ];
 
 var galleryResetTimeout;
@@ -196,13 +212,13 @@ var resetGallery = function(tags) {
       if(hasTags(images[i].tags) || tags === '') {
         $("#gallery-content").prepend(
             '<div class="image-thumb-outer">' +
-              '<img class="image-thumb" height="100px" width="auto" src="photography/'+i+'.jpg"/>' +
+              '<img class="image-thumb" height="100px" width="auto" src="photography/thumbnails/'+i+'.jpg"/>' +
             '</div>');
         }
     }
     $(".image-thumb-outer").on("click", function() {
       clickSrc = $(this).children().attr("src");
-      clickSrc = clickSrc.replace("photography/", "").replace(".jpg", "");
+      clickSrc = clickSrc.replace("photography/thumbnails/", "").replace(".jpg", "");
       showImage(clickSrc, true);
     });
   }, 200);
@@ -252,6 +268,8 @@ $(document).ready(function() {
 
   if(hasTags(hash) && hash !== "") {
     selectGallery(hash);
+  } else {
+    selectGallery("favorites");
   }
 
   $(".gallery-selector").click(function() {
