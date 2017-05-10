@@ -118,7 +118,7 @@ var imageTags = [ //line refers to (linecount - 2).jpg
   ["long exposure", "abstract"],
   ["abstract", "minimal", "long exposure"],
   ["landscape", "photoshop", "sunset", "favorites"],
-  ["landscape", "photoshop", "sunset"],
+  ["macro"],
   ["landscape", "photoshop", "long exposure"],
   ["landscape", "photoshop", "sunset", "favorites"],
   ["astro", "photoshop", "long exposure", "milky way", "favorites", "landscape"],
