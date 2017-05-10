@@ -109,9 +109,20 @@ var imageTags = [ //line refers to (linecount - 2).jpg
   ["abstract", "long exposure"],
   ["abstract", "long exposure", "favorites"],
   ["abstract", "long exposure", "favorites"],
-  ["astro", "photoshop", "long exposure", "milky way", "favorites", "landscape"],
   ["landscape", "photoshop", "long exposure", "favorites"],
-  ["landscape", "fall", "photoshop", "favorites"]
+  ["landscape", "photoshop", "long exposure", "favorites"],
+  ["landscape", "fall", "photoshop", "favorites"],
+  ["landscape", "sunset", "photoshop"],
+  ["macro", "flowers"],
+  ["long exposure", "abstract", "favorites"],
+  ["long exposure", "abstract"],
+  ["abstract", "minimal", "long exposure"],
+  ["landscape", "photoshop", "sunset", "favorites"],
+  ["landscape", "photoshop", "sunset"],
+  ["landscape", "photoshop", "long exposure"],
+  ["landscape", "photoshop", "sunset", "favorites"],
+  ["astro", "photoshop", "long exposure", "milky way", "favorites", "landscape"],
+  ["landscape", "photoshop", "sunset", "favorites"]
 ];
 
 var galleryResetTimeout;
