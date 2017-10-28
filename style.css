@@ -633,6 +633,8 @@ a {
 #gallery-content {
   width: auto;
   height: auto;
+  padding: 5%;
+  padding-top: 0;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -640,12 +642,12 @@ a {
 }
 
 .image-thumb-outer {
-  height: 100px;
+  height: 200px;
   background-color: black;
   width: auto;
   border: 2px solid transparent;
   margin: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: inline-block;
   transition: border 0.2s;
