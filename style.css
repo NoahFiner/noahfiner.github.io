@@ -217,14 +217,17 @@ body.loading {
   transition: all 0.25s;
 }
 
-#games {
-  background-image: url('img/header/games.png');
-}
+/* #games {
+  background-image: url('img/header/sites.png');
+} */
 #sites {
   background-image: url('img/header/sites.png');
 }
 #photos {
   background-image: url('img/header/camera.png');
+}
+#other {
+  background-image: url('img/header/other.png');
 }
 
 #header-links > a:hover, #header-links > a.hovered {
@@ -291,6 +294,74 @@ body.loading {
 #content-inner {
   padding: 0;
   margin: 0;
+}
+
+.section-outer {
+  background-color: #555;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  width: 70%;
+  margin: 50px auto;
+}
+
+.section-outer > h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.section-outer > h2 {
+  font-weight: 900;
+  font-size: 28px;
+  margin-top: 30px;
+  width: 70%;
+}
+
+.section-outer > h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin: 5px 0;
+  width: 70%;
+}
+
+.section-outer > h4 {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.section-outer > h6 {
+  float: right;
+  font-size: 18px;
+  opacity: 0.75;
+  font-weight: 900;
+  margin-top: -24px;
+  text-align: right;
+}
+
+.section-outer > p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.section-outer > hr {
+  outline: 0;
+  border: 0;
+  height: 5px;
+  width: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 50px auto;
+}
+
+.section-outer > hr.artsy {
+  margin: 10px 0;
+  width: 200px;
+  opacity: 1;
 }
 
 .intro > div > h1, .intro > div > p {
@@ -398,7 +469,7 @@ a {
 
 #text-content a, .pretty-link {
   text-decoration: none;
-  padding: 2.5px;
+  padding: 1px;
   border-bottom: 2px solid #fff;
   background-color: transparent;
   transition: background-color 0.25s;
@@ -447,15 +518,24 @@ a {
 }
 
 .info > h1 {
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  line-height: 1;
 }
 
 .info > h2 {
-  font-size: 25px;
-  margin-top: -5px;
+  font-size: 16px;
+  margin-top: 5px;
+  opacity: 0.75;
+  font-weight: 400;
 }
 
-.info > p {
+.info > h2 > span {
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.info > p:not(.tags) {
   font-size: 15px;
   font-weight: 100;
   font-family: "Lato", "Montserrat", sans-serif;
@@ -468,7 +548,7 @@ a {
   background-color: #fff;
   height: 0px;
   width: 100%;
-  margin: 15px auto;
+  margin: 5px auto;
 }
 
 .date {
@@ -477,6 +557,14 @@ a {
   position: absolute;
   right: -10px;
   bottom: 5px;
+}
+
+.tags {
+  opacity: 0.25;
+  font-size: 15px;
+  display: block;
+  margin-top: 10px;
+  font-weight: 900;
 }
 
 .gh-link {
@@ -557,6 +645,10 @@ a {
 
 #loading-main.games {
   background-image: url('img/header/games.png');
+}
+
+#loading-main.other {
+  background-image: url('img/header/other.png');
 }
 
 #loading-main.down, #loading-back.down {
@@ -923,5 +1015,18 @@ a {
 
   #footer-links > a {
     font-size: 20px;
+  }
+
+  .section-outer {
+    padding: 20px;
+    width: 80%;
+  }
+  .section-outer > h1, .section-outer > h2, .section-outer > h3 {
+    width: 100%;
+  }
+  .section-outer > h6 {
+    float: none;
+    margin: 0;
+    text-align: left;
   }
 }
