@@ -320,11 +320,15 @@ body.loading {
 
 .section-outer > h3 {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: 0.7;
   margin: 5px 0;
-  width: 70%;
+  width: 80%;
+}
+
+.section-outer > h3 > a {
+  padding: 0px;
 }
 
 .section-outer > h4 {
@@ -375,7 +379,7 @@ body.loading {
 
 .pretty-intro-link {
   text-decoration: none;
-  border-bottom: 2px solid #fff;
+  border-bottom: 3px solid #fff;
   padding-bottom: 0.5px !important;
   opacity: 0.75;
   background-color: transparent;
@@ -481,11 +485,22 @@ a {
 
 .link-outer {
   margin: 30px;
+  padding: 20px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   width: calc(80vw);
   height: auto;
+  background-color: #555;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: transform 0.25s, background-color 0.25s;
+  -webkit-transition: transform 0.25s, background-color 0.25s;
+}
+
+.link-outer:hover {
+  transform: translateY(-5px);
+  background-color: #666;
 }
 
 .link-outer > a > img {
@@ -502,13 +517,12 @@ a {
   background-color: transparent;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 20px;
   transition: background-color 0.25s;
 }
 
-.link-outer:hover > a:not(.gh-link) {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+/* .link-outer:hover > a:not(.gh-link) {
+  background-color: rgba(255, 255, 255, 0.05);
+} */
 
 .info {
   width: 50%;
@@ -555,8 +569,8 @@ a {
   opacity: 0.5;
   font-size: 12px;
   position: absolute;
-  right: -10px;
-  bottom: 5px;
+  right: 40px;
+  bottom: 15px;
 }
 
 .tags {
@@ -571,8 +585,8 @@ a {
   height: 15px;
   width: 15px;
   position: absolute;
-  bottom: 5px;
-  right: -32.5px;
+  bottom: 15px;
+  right: 15px;
   opacity: 0.5;
   transition: opacity 0.25s;
 }
@@ -923,7 +937,7 @@ a {
   opacity: 1;
 }
 
-@media(max-width:650px) {
+@media(max-width:800px) {
   .gh-link {
     right: 5px;
   }
@@ -937,9 +951,10 @@ a {
     padding: 0;
   }
   .link-outer {
-    width: 90vw;
+    width: 80vw;
     margin-right: auto;
     margin-left: auto;
+    padding: 20px;
   }
   .link-outer > a > img {
     display: block;
@@ -958,9 +973,14 @@ a {
     margin-top: 20px;
     display: block;
     border: 0;
-    border-top: 2px solid #fff;
     width: 100%;
     margin: 0;
+  }
+  .date {
+    left: 20px;
+  }
+  .gh-link {
+    right: 20px;
   }
 
   #header {
