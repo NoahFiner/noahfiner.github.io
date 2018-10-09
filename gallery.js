@@ -91,10 +91,12 @@ for(var i = 0; i < imageTags.length; i++ ){
 
 var showImage = function(image, state) {
   clearTimeout(loadingTimeout);
+  $(".image-full").addClass("loading");
   if(state) {
-    // $(".image-full").attr("src", "photography/loading.jpg");
-    $("body, .image-full").addClass("loading");
+    $("body").addClass("loading");
     $("#image-full-outer").removeClass("hidden");
+
+    $(".image-full").attr("src", "photography/"+image+".jpg");
 
     $(".image-full").on("load", function() {
       $(".image-full").removeClass("loading");
@@ -102,8 +104,6 @@ var showImage = function(image, state) {
       //if image is already cached/loaded
       if(this.complete) $(this).trigger('load');
     });
-    $(".image-full").attr("src", "photography/"+image+".jpg");
-    // img.src = "photography/"+image+".jpg";
 
     checkWidth();
   }
