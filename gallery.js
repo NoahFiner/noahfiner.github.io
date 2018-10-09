@@ -70,7 +70,6 @@ var currentTags = [];
 var uniqueTags = [];
 var hash = window.location.hash.substring(1);
 
-
 var Image = function(num, tags) {
   this.tags = tags;
   this.num = num;
@@ -93,14 +92,23 @@ for(var i = 0; i < imageTags.length; i++ ){
 var showImage = function(image, state) {
   clearTimeout(loadingTimeout);
   if(state) {
-    $(".image-full").attr("src", "photography/loading.jpg");
-    $("body").addClass("loading");
+    // $(".image-full").attr("src", "photography/loading.jpg");
+    $("body, .image-full").addClass("loading");
     $("#image-full-outer").removeClass("hidden");
-    setTimeout(function() {$(".image-full").attr("src", "photography/"+image+".jpg");}, 10);
+
+    $(".image-full").on("load", function() {
+      $(".image-full").removeClass("loading");
+    }).each(function() {
+      //if image is already cached/loaded
+      if(this.complete) $(this).trigger('load');
+    });
+    $(".image-full").attr("src", "photography/"+image+".jpg");
+    // img.src = "photography/"+image+".jpg";
+
     checkWidth();
   }
   else {
-    $("body").removeClass("loading");
+    $("body .image-full").removeClass("loading");
     loadingTimeout = setTimeout(function() {$(".image-full").attr("src", "photography/loading.jpg");}, 500);
     $("#image-full-outer").addClass("hidden");
   }

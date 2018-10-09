@@ -714,6 +714,13 @@ a {
   height: 90%;
   cursor: pointer;
   pointer-events: auto;
+  opacity: 0.75;
+  transition: opacity 0.25s;
+  -webkit-transition: opacity 0.25;s
+}
+
+.image-full.loading {
+  opacity: 0.25;
 }
 
 .image-full.width90 {
