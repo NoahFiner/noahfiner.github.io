@@ -93,10 +93,10 @@ for(var i = 0; i < imageTags.length; i++ ){
 var showImage = function(image, state) {
   clearTimeout(loadingTimeout);
   if(state) {
-    currentImage = image;
+    $(".image-full").attr("src", "photography/loading.jpg");
     $("body").addClass("loading");
     $("#image-full-outer").removeClass("hidden");
-    setTimeout(function() {$(".image-full").attr("src", "photography/"+currentImage+".jpg");}, 10);
+    setTimeout(function() {$(".image-full").attr("src", "photography/"+image+".jpg");}, 10);
     checkWidth();
   }
   else {
