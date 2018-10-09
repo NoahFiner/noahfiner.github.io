@@ -92,6 +92,7 @@ for(var i = 0; i < imageTags.length; i++ ){
 var showImage = function(image, state) {
   clearTimeout(loadingTimeout);
   $(".image-full").addClass("loading");
+  $("body, .image-full").removeClass("loading");
   if(state) {
     $("body").addClass("loading");
     $("#image-full-outer").removeClass("hidden");
@@ -108,7 +109,6 @@ var showImage = function(image, state) {
     checkWidth();
   }
   else {
-    $("body .image-full").removeClass("loading");
     loadingTimeout = setTimeout(function() {$(".image-full").attr("src", "photography/loading.jpg");}, 500);
     $("#image-full-outer").addClass("hidden");
   }
