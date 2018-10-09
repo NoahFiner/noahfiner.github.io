@@ -474,6 +474,8 @@ body.loading {
 #content-inner > p {
   font-size: 20px;
   padding: 20px 30px;
+  width: 77.5%;
+  margin: 0 auto;
   line-height: 1.5;
 }
 
@@ -506,6 +508,16 @@ a {
   transform: translateY(0);
   transition: transform 0.25s, background-color 0.25s;
   -webkit-transition: transform 0.25s, background-color 0.25s;
+}
+
+.link-outer > a > img {
+  opacity: 1;
+  transition: opacity 0.25s;
+  -webkit-transition: opacity 0.25s;
+}
+
+.not-loaded {
+  opacity: 0;
 }
 
 .link-outer:hover {

@@ -123,8 +123,8 @@ $(document).ready(function() {
     for(var j = 0; j < amountOfIntroSquares; j++) {
       var elemWidth = Math.floor(Math.random()*150+10);
       var elemHeight = Math.floor(Math.random()*200+10);
-      var randHeight = 1-Math.pow(Math.random(), 1.5);
-      var randWidth = 1-Math.pow(Math.random(), 2);
+      var randHeight = Math.random();
+      var randWidth = Math.random();
       var heightMultiplier = 1.2;
       console.log(Math.pow(Math.random(), 5));
       $("#parallax-back"+i).append("<div style='height: "+elemHeight+"px;\
