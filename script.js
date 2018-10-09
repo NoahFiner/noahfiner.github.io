@@ -162,9 +162,9 @@ $(window).scroll(function() {
   } else {
     $("#parallax-background").css("background-image", "url('photography/intro"+(Math.ceil((scroll-offset)/height) + 1)+".jpg')");
   }
-  $("#parallax-back1").css("transform", "translateY("-(scroll/0.25)+"px)");
-  $("#parallax-back2").css("transform", "translateY("-(scroll/0.75)+"px)");
-  $("#parallax-back3").css("transform", "translateY("-(scroll/1)+"px)");
-  $("#parallax-back4").css("transform", "translateY("-(scroll/1.25)+"px)");
-  $("#parallax-back5").css("transform", "translateY("-(scroll/3)+"px)");
+  $("#parallax-back1").css("transform", "translateY(-"+(scroll/0.25)+"px)");
+  $("#parallax-back2").css("transform", "translateY(-"+(scroll/0.75)+"px)");
+  $("#parallax-back3").css("transform", "translateY(-"+(scroll/1)+"px)");
+  $("#parallax-back4").css("transform", "translateY(-"+(scroll/1.25)+"px)");
+  $("#parallax-back5").css("transform", "translateY(-"+(scroll/3)+"px)");
 });
