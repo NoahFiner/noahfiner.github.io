@@ -516,7 +516,7 @@ a {
   -webkit-transition: opacity 0.25s;
 }
 
-.not-loaded {
+.link-outer > a > img.not-loaded {
   opacity: 0;
 }
 
