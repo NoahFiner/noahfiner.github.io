@@ -90,16 +90,13 @@ for(var i = 0; i < imageTags.length; i++ ){
 }
 
 var showImage = function(image, state) {
-  clearTimeout(loadingTimeout);
-  $(".image-full").addClass("loading");
   $("body, .image-full").removeClass("loading");
   if(state) {
+    $(".image-full").addClass("loading");
     $("body").addClass("loading");
     $("#image-full-outer").removeClass("hidden");
 
     $(".image-full").attr("src", "photography/"+image+".jpg");
-
-    console.log("loading");
 
     $(".image-full").on("load", function() {
       console.log("loaded");
