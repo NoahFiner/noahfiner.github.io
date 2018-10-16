@@ -99,14 +99,16 @@ var showImage = function(image, state) {
 
     $(".image-full").attr("src", "photography/"+image+".jpg");
 
+    console.log("loading");
+
     $(".image-full").on("load", function() {
+      console.log("loaded");
       $(".image-full").removeClass("loading");
+      checkWidth();
     }).each(function() {
       //if image is already cached/loaded
       if(this.complete) $(this).trigger('load');
     });
-
-    checkWidth();
   }
   else {
     loadingTimeout = setTimeout(function() {$(".image-full").attr("src", "photography/loading.jpg");}, 500);
@@ -175,12 +177,14 @@ var resetGallery = function(tags) {
     $(".image-thumb-outer").on("click", function() {
       clickSrc = $(this).children().attr("src");
       clickSrc = clickSrc.replace("photography/thumbnails/", "").replace(".jpg", "");
-      showImage(clickSrc, true);
+      currentImage = clickSrc;
+      showImage(currentImage, true);
     });
   }, 200);
 };
 
 var checkWidth = function() {
+  console.log("checking width");
   var wHeight = window.innerHeight;
   var wWidth = window.innerWidth;
   var iHeight = $(".image-full").height();

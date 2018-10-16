@@ -126,7 +126,6 @@ $(document).ready(function() {
       var randHeight = Math.random();
       var randWidth = Math.random();
       var heightMultiplier = 1.2;
-      console.log(Math.pow(Math.random(), 5));
       $("#parallax-back"+i).append("<div style='height: "+elemHeight+"px;\
                 width: "+elemWidth+"px;\
                 top: "+randHeight*100+"%;\
