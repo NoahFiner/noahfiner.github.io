@@ -147,9 +147,9 @@ $(window).scroll(function() {
   var offset = 100;
   var heightsScrolled = Math.ceil((scroll-offset)/height);
   if(heightsScrolled <= 2) {
-    $("#parallax-back1").css("transform", "translateY(-"+(scroll/0.75)+"px)");
-    $("#parallax-back2").css("transform", "translateY(-"+(scroll/1.0)+"px)");
-    $("#parallax-back3").css("transform", "translateY(-"+(scroll/1.25)+"px)");
+    $("#parallax-back1").css("transform", "translateY(-"+(scroll/0.6)+"px)");
+    $("#parallax-back2").css("transform", "translateY(-"+(scroll/1.3)+"px)");
+    $("#parallax-back3").css("transform", "translateY(-"+(scroll/1.8)+"px)");
   }
   if(heightsScrolled <= 1) {
     $("#parallax-background").css("background-image", "url('photography/intro1.jpg')");

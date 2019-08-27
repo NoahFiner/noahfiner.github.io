@@ -450,6 +450,14 @@ body.loading {
   z-index: 1;
 }
 
+#parallax-back1 {
+  filter: blur(3px);
+}
+
+#parallax-back3 {
+  filter: blur(2px);
+}
+
 #parallax-background {
   position: fixed;
   height: 100vh;
