@@ -136,9 +136,11 @@ $(document).ready(function() {
                 </div>");
     }
   }
+
+  handleScroll(true);
 });
 
-$(window).scroll(function() {
+var handleScroll = function(overrideCheck = false) {
   scroll = $(window).scrollTop();
   scrollAmt = Math.ceil((scroll - 100) / window.innerHeight);
   if(scrollAmt < 0) {
@@ -146,7 +148,7 @@ $(window).scroll(function() {
   }
   var offset = 100;
   var heightsScrolled = Math.ceil((scroll-offset)/height);
-  if(heightsScrolled <= 2) {
+  if(heightsScrolled <= 2 || overrideCheck) {
     $("#parallax-back1").css("transform", "translateY(-"+(scroll/0.6)+"px)");
     $("#parallax-back2").css("transform", "translateY(-"+(scroll/1.3)+"px)");
     $("#parallax-back3").css("transform", "translateY(-"+(scroll/1.8)+"px)");
@@ -156,4 +158,6 @@ $(window).scroll(function() {
   } else {
     $("#parallax-background").css("background-image", "url('photography/intro"+(heightsScrolled + 1)+".jpg')");
   }
-});
+}
+
+$(window).scroll(handleScroll);
