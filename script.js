@@ -126,8 +126,11 @@ $(document).ready(function() {
       var randHeight = Math.random();
       var randWidth = Math.random();
       var heightMultiplier = 1.2;
+      var circle = Math.random() > 0.7;
       $("#parallax-back"+i).append("<div style='height: "+elemHeight+"px;\
-                width: "+elemWidth+"px;\
+                width: "+(circle ? elemHeight : elemWidth)+"px;\
+                border-radius: "+(circle ? '100%' : '')+";\
+                background-color: " + (Math.random() > 0.8 ? '#aaa' : 'transparent') + ";\
                 top: "+randHeight*100+"%;\
                 left: "+randWidth*100+"%'>\
                 </div>");

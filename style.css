@@ -243,12 +243,12 @@ body.loading {
   width: 10vw;
   height: calc(100vh - 100px);
   left: 90vw;
-  z-index: 1;
+  z-index: 101;
 }
 
 #scroll-up, #scroll-down {
   position: absolute;
-  color: #1EC322;
+  color: #fff;
   font-size: 5vw;
   right: 20px;
   cursor: pointer;
@@ -379,11 +379,21 @@ body.loading {
 
 .intro > div > h1, .intro > div > p {
   padding: 5px 10px;
-  background-color: #1EC322;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
   width: auto;
   float: left;
   clear: left;
   font-size: 3vw;
+}
+
+.intro > div > h1 {
+  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-weight: 900;
+  color: #000;
+  background-color: #fff;
+  text-shadow: none;
+  margin-left: -10px;
+  padding-left: 10px;
 }
 
 .pretty-intro-link {
@@ -416,6 +426,8 @@ body.loading {
   height: 100vh;
   position: relative;
   margin: 0;
+  padding-left: 10px;
+  z-index: 100;
 }
 
 .parallax-back {
@@ -430,7 +442,7 @@ body.loading {
 
 .parallax-back > div {
   position: absolute;
-  background-color: #1EC322;
+  border: 4px solid #aaa;
   opacity: 0.2;
 }
 
