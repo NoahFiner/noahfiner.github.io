@@ -3,3 +3,4 @@ camera.afdesign
 sites.afdesign
 photography/script.sh
 mail.afdesign
+*.DS_store*

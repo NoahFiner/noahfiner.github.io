@@ -1,269 +1,470 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Noah Finer - Websites</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link type="text/css" rel="stylesheet" href="style.css"/>
-  <meta name="description" content="The portfolio site for Noah Finer, including web games, websites, and astro/landscape/abstract/macro photography."/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <head>
+    <title>Noah Finer - Websites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="The portfolio site for Noah Finer, including web games, websites, and astro/landscape/abstract/macro photography."
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 
-  <script>
-  //add a quick animation for images loading
+    <script>
+      //add a quick animation for images loading
 
-  $(document).ready(function() {
-    $(".link-outer > a > img").each(function() {
-      $(this).on("load", function() {
-        $(this).removeClass("not-loaded");
-      }).each(function() {
-        //if image is already cached/loaded
-        if(this.complete) $(this).trigger('load');
+      $(document).ready(function () {
+        $(".link-outer > a > img").each(function () {
+          $(this)
+            .on("load", function () {
+              $(this).removeClass("not-loaded");
+            })
+            .each(function () {
+              //if image is already cached/loaded
+              if (this.complete) $(this).trigger("load");
+            });
+        });
       });
-    });
-  });
-  </script>
-</head>
-<body>
-  <div id="everything">
-    <div id="loading-outer">
-      <div id="loading-back"></div>
-      <div id="loading-main" class="sites"></div>
-    </div>
-    <div id="header">
-      <div id="info">
-        <a class="local-link l-index" id="index">
-          <img src="img/logo.png" id="logo"/>
-        </a>
-        <div id="vertical-hr"></div>
-        <div id="name-inner">
-          <a class="local-link l-index" id="name">Noah Finer</a>
-          <div class="social-media">
-            <a href="http://twitter.com/finerflame">
-              <img src="img/social/twitter.png" class="social"/>
-            </a>
-            <a href="http://instagram.com/noahfiner">
-              <img src="img/social/instagram.png" class="social"/>
-            </a>
-            <a href="http://github.com/noahfiner">
-              <img src="img/social/github.png" class="social"/>
-            </a>
-            <a href="mailto:noahfiner@gmail.com">
-              <img src="img/social/mail.png" class="social"/>
-            </a>
+    </script>
+  </head>
+  <body>
+    <div id="everything">
+      <div id="loading-outer">
+        <div id="loading-back"></div>
+        <div id="loading-main" class="sites"></div>
+      </div>
+      <div id="header">
+        <div id="info">
+          <a class="local-link l-index" id="index">
+            <img src="img/logo.png" id="logo" />
+          </a>
+          <div id="vertical-hr"></div>
+          <div id="name-inner">
+            <a class="local-link l-index" id="name">Noah Finer</a>
+            <div class="social-media">
+              <a href="http://twitter.com/finerflame">
+                <img src="img/social/twitter.png" class="social" />
+              </a>
+              <a href="http://instagram.com/noahfiner">
+                <img src="img/social/instagram.png" class="social" />
+              </a>
+              <a href="http://github.com/noahfiner">
+                <img src="img/social/github.png" class="social" />
+              </a>
+              <a href="mailto:noahfiner@gmail.com">
+                <img src="img/social/mail.png" class="social" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="header-links">
+          <!-- <a class="local-link l-games" id="games">GAMES</a> -->
+          <a class="local-link l-sites" id="sites">WEBSITES</a>
+          <a class="local-link l-photos" id="photos">PHOTOS</a>
+          <a class="local-link l-other" id="other">RESUME</a>
+        </div>
+        <div id="hamburger-outer">
+          <div style="height: 100%; width: 100%; position: relative;">
+            <div id="hamburger1" class="hamburger"></div>
+            <div id="hamburger2" class="hamburger"></div>
+            <div id="hamburger3" class="hamburger"></div>
           </div>
         </div>
       </div>
-      <div id="header-links">
-        <!-- <a class="local-link l-games" id="games">GAMES</a> -->
-        <a class="local-link l-sites" id="sites">WEBSITES</a>
-        <a class="local-link l-photos" id="photos">PHOTOS</a>
-        <a class="local-link l-other" id="other">RESUME</a>
-      </div>
-      <div id="hamburger-outer">
-        <div style="height: 100%; width: 100%; position: relative">
-          <div id="hamburger1" class="hamburger"></div>
-          <div id="hamburger2" class="hamburger"></div>
-          <div id="hamburger3" class="hamburger"></div>
-        </div>
-      </div>
-    </div>
-    <div id="content">
-      <div id="content-inner">
-        <h1>WEBSITES</h1>
+      <div id="content">
+        <div id="content-inner">
+          <h1>WEBSITES</h1>
 
-        <div class="link-outer">
-          <a id="weword" href="https://weword.co" target="_blank">
-            <img class="not-loaded" src="img/weword.png"/>
-            <div class="info">
-              <h1>WeWord</h1>
-              <h2>Real-time Crowdsourced Stories (18+) | <span>JUST FUN</span></h2>
-              <hr>
-              <p>WeWord is a platform where anyone can write stories together in real-time. I released it to the internet and had 1,000 users and 10,000+ words submitted within a week, but shut it down and reset stories after users found ways around my swear filter. I used tools like socket.io, NodeJS, MongoDB, Redis, ReactJS, and Docker + GCP Compute Engine.</p>
-            </div>
-          </a>
-          <p class="date">released on 12/13/19</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/weword-everything"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a id="chime" href="https://chimemenu.com" target="_blank">
+              <img class="not-loaded" src="img/chime.png" />
+              <div class="info">
+                <h1>Chime</h1>
+                <h2>A digital menu experience | <span>STARTUP</span></h2>
+                <hr />
+                <p>
+                  On top of working at Stripe for summer 2020, I helped scale
+                  Chime Menu, a digital menu startup focused on enhancing the
+                  dine-in experience. I built a modern TypeScript/React frontend
+                  for both a ~20-page user-facing app and interactive server
+                  app. I utilized Redux/Contexts for state management, SCSS
+                  modules for BEM-based styling, Rollbar/Google Analytics for
+                  error handling, and far more tools. Chime now handles hundreds
+                  of contactless orders every week.
+                </p>
+              </div>
+            </a>
+            <p class="date">summer 2020</p>
+          </div>
 
-        <div class="link-outer">
-          <a id="productiv" href="https://productiv.com" target="_blank">
-            <img class="not-loaded" src="img/productiv.png"/>
-            <div class="info">
-              <h1>Productiv</h1>
-              <h2>A SaaS management startup | <span>INTERNSHIP</span></h2>
-              <hr>
-              <p>I implemented and helped design a new venn diagram visualization among others to identify application overlap for Productiv, a SaaS management startup. The project, using NodeJS, Vue, and D3, quickly expanded in scope and within weeks of the internship to soon become one of Productiv's core features, still developed on today.</p>
-            </div>
-          </a>
-          <p class="date">summer 2019</p>
-        </div>
+          <div class="link-outer">
+            <a id="weword" href="https://weword.co" target="_blank">
+              <img class="not-loaded" src="img/weword.png" />
+              <div class="info">
+                <h1>WeWord</h1>
+                <h2>
+                  Real-time Crowdsourced Stories (18+) | <span>JUST FUN</span>
+                </h2>
+                <hr />
+                <p>
+                  WeWord is a platform where anyone can write stories together
+                  in real-time. I released it to the internet and watched 1,000
+                  users submit 20,000+ within a week, but shut it down after
+                  some naughty writers worked around my swear filter. I used
+                  tools like socket.io, NodeJS, MongoDB, Redis, ReactJS, and
+                  Docker + GCP Compute Engine.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 12/13/19</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/weword-everything"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="rollout" href="https://rollout.noahfiner.com" target="_blank">
-            <img class="not-loaded" src="img/rollout.png"/>
-            <div class="info">
-              <h1>RollOut</h1>
-              <h2>A failed P2P delivery startup | <span>STARTUPS</span></h2>
-              <hr>
-              <p>I used React Native to develop a large-scale front-end for a cross-platform peer-to-peer food delivery application. Unfortunately, despite an extensive development effort, the project was abandoned (but I learned a ton in the process).</p>
-            </div>
-          </a>
-          <p class="date">release date tbd</p>
-        </div>
+          <div class="link-outer">
+            <a id="productiv" href="https://productiv.com" target="_blank">
+              <img class="not-loaded" src="img/productiv.png" />
+              <div class="info">
+                <h1>Productiv</h1>
+                <h2>A SaaS management startup | <span>INTERNSHIP</span></h2>
+                <hr />
+                <p>
+                  I implemented and helped design a new venn diagram
+                  visualization among others to identify application overlap for
+                  Productiv, a SaaS management startup. The project, using
+                  NodeJS, Vue, and D3, quickly expanded in scope and within
+                  weeks of the internship to soon become one of Productiv's core
+                  features, still developed on today.
+                </p>
+              </div>
+            </a>
+            <p class="date">summer 2019</p>
+          </div>
 
-        <div class="link-outer">
-          <a id="h2whoah" href="https://github.com/NoahFiner/H2Whoah" target="_blank">
-            <img class="not-loaded" src="img/h2whoah.png"/>
-            <div class="info">
-              <h1>H2Whoah</h1>
-              <h2>Storing rainwater and releasing it according to weather and sensors | <span>CLASS</span></h2>
-              <hr>
-              <p>This "smart" irrigation barrel collects rain water and distributes it based on weather data, soil moisture sensor readings, and the amount of water left in the barrel. It involves a Photon microprocessor written in ArduinoC, a Python script hosted with AWS, a Flask-based web dashboard, and an InfluxDB database.</p>
-            </div>
-          </a>
-          <p class="date">released on 12/6/18</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/h2whoah"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="rollout"
+              href="https://rollout.noahfiner.com"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/rollout.png" />
+              <div class="info">
+                <h1>RollOut</h1>
+                <h2>A failed P2P delivery startup | <span>STARTUPS</span></h2>
+                <hr />
+                <p>
+                  I used React Native to develop a large-scale front-end for a
+                  cross-platform peer-to-peer food delivery application.
+                  Unfortunately, despite an extensive development effort, the
+                  project was abandoned (but I learned a ton in the process).
+                </p>
+              </div>
+            </a>
+            <p class="date">release date tbd</p>
+          </div>
 
-        <div class="link-outer">
-          <a id="socialmedai" href="https://www.youtube.com/watch?v=rRRWZ08uLQE" target="_blank">
-            <img class="not-loaded" src="img/socialmedai.png"/>
-            <div class="info">
-              <h1>SocialmedAI</h1>
-              <h2>Analyzing which Instagram posts are successful and using ML to see why | <span>HACKATHON </span></h2>
-              <hr>
-              <p>I worked with a back-end developer and data scientist in MHacks 11 to develop the front-end for a web application that determines factors for an Instagram users' past post performances. We won the award for the best use of Clarifai's API out of all hackathons that weekend.</p>
-            </div>
-          </a>
-          <p class="date">released on 10/14/18</p>
-        </div>
+          <div class="link-outer">
+            <a
+              id="h2whoah"
+              href="https://github.com/NoahFiner/H2Whoah"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/h2whoah.png" />
+              <div class="info">
+                <h1>H2Whoah</h1>
+                <h2>
+                  Storing rainwater and releasing it according to weather and
+                  sensors | <span>CLASS</span>
+                </h2>
+                <hr />
+                <p>
+                  This "smart" irrigation barrel collects rain water and
+                  distributes it based on weather data, soil moisture sensor
+                  readings, and the amount of water left in the barrel. It
+                  involves a Photon microprocessor written in ArduinoC, a Python
+                  script hosted with AWS, a Flask-based web dashboard, and an
+                  InfluxDB database.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 12/6/18</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/h2whoah"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="multitaskilus" href="https://fairviewhs.org" target="_blank">
-            <img class="not-loaded" src="img/fairview.png"/>
-            <div class="info">
-              <h1>Fairview Web Team</h1>
-              <h2>Co-leader of org. behind high school's Rails website | <span>SCHOOL</span></h2>
-              <hr>
-              <p>I was the co-leader of 100% student-run organization of ~10 members maintaining my high school's website, written with Ruby on Rails and gaining 100,000+ weekly pageviews. Projects included restructuring and redesigning an online tutoring system, creating virtual holiday-themed games/puzzles, and managing/developing for the first redesign in the website's 8-year history.</p>
-            </div>
-          </a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="socialmedai"
+              href="https://www.youtube.com/watch?v=rRRWZ08uLQE"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/socialmedai.png" />
+              <div class="info">
+                <h1>SocialmedAI</h1>
+                <h2>
+                  Analyzing which Instagram posts are successful and using ML to
+                  see why | <span>HACKATHON </span>
+                </h2>
+                <hr />
+                <p>
+                  I worked with a back-end developer and data scientist in
+                  MHacks 11 to develop the front-end for a web application that
+                  determines factors for an Instagram users' past post
+                  performances. We won the award for the best use of Clarifai's
+                  API out of all hackathons that weekend.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 10/14/18</p>
+          </div>
 
-        <div class="link-outer">
-          <a id="multitaskilus" href="https://multitaskilus.noahfiner.com/" target="_blank">
-            <img class="not-loaded" src="img/multitaskilus.png"/>
-            <div class="info">
-              <h1>multitaskilus</h1>
-              <h2>Don't relieve stress, create it! | <span>GAMING</span></h2>
-              <hr>
-              <p>Multitaskilus is a game in which the player is presented with many tasks and little time to do them. Multitaskilus became rather popular, receiving 3,000+ page views and causing a YouTuber to record his playthrough. It utilizes some old, ugly OOP ES5 JavaScript and jQuery.</p>
-            </div>
-          </a>
-          <p class="date">released on 2/4/16</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/multitaskilus"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a id="multitaskilus" href="https://fairviewhs.org" target="_blank">
+              <img class="not-loaded" src="img/fairview.png" />
+              <div class="info">
+                <h1>Fairview Web Team</h1>
+                <h2>
+                  Co-leader of org. behind high school's Rails website |
+                  <span>SCHOOL</span>
+                </h2>
+                <hr />
+                <p>
+                  I was the co-leader of 100% student-run organization of ~10
+                  members maintaining my high school's website, written with
+                  Ruby on Rails and gaining 100,000+ weekly pageviews. Projects
+                  included restructuring and redesigning an online tutoring
+                  system, creating virtual holiday-themed games/puzzles, and
+                  managing/developing for the first redesign in the website's
+                  8-year history.
+                </p>
+              </div>
+            </a>
+          </div>
 
-        <div class="link-outer">
-          <a id="tuition" href="http://tuitionhotsauces.com" target="_blank">
-            <img class="not-loaded" src="img/tuition.png"/>
-            <div class="info">
-              <h1>Tuition Hot Sauce</h1>
-              <h2>A local hot sauce company | <span>BUSINESS</span></h2>
-              <hr>
-              <p>I was approached by a friend to create a landing/information page for their hot sauce company. I whipped up something hotter than her sauce.</p>
-            </div>
-          </a>
-          <p class="date">released on 10/30/17</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/dkphoto"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="multitaskilus"
+              href="https://multitaskilus.noahfiner.com/"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/multitaskilus.png" />
+              <div class="info">
+                <h1>multitaskilus</h1>
+                <h2>Don't relieve stress, create it! | <span>GAMING</span></h2>
+                <hr />
+                <p>
+                  Multitaskilus is a game in which the player is presented with
+                  many tasks and little time to do them. Multitaskilus became
+                  rather popular, receiving 3,000+ page views and causing a
+                  YouTuber to record his playthrough. It utilizes some old, ugly
+                  OOP ES5 JavaScript and jQuery.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 2/4/16</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/multitaskilus"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="honestlyy" target="_blank" href="https://honestlyy.herokuapp.com/">
-            <img class="not-loaded" src="img/honestlyy.png"/>
-            <div class="info">
-              <h1>honestlyy</h1>
-              <h2>Answer meaningless questions honestly | <span>GAMING</span></h2>
-              <hr>
-              <p>honestlyy is an anonymous survey game. I tried my best to use PostgreSQL and Ruby on Rails and believe I was successful.</p>
-            </div>
-          </a>
-          <p class="date">released in 2017</p>
-          <a class="gh-link" target="_blank" href="http://github.com/noahfiner/honestlyy"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a id="tuition" href="http://tuitionhotsauces.com" target="_blank">
+              <img class="not-loaded" src="img/tuition.png" />
+              <div class="info">
+                <h1>Tuition Hot Sauce</h1>
+                <h2>A local hot sauce company | <span>BUSINESS</span></h2>
+                <hr />
+                <p>
+                  I was approached by a friend to create a landing/information
+                  page for their hot sauce company. I whipped up something
+                  hotter than her sauce.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 10/30/17</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/dkphoto"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="tuition" href="https://electric-force-sim.noahfiner.com/" target="_blank">
-            <img class="not-loaded" src="img/electric.png"/>
-            <div class="info">
-              <h1>Particle Simulation</h1>
-              <h2>A physics simulation of electric forces | <span>SCHOOL</span></h2>
-              <hr>
-              <p>I made a dope electric field simulation using the canvas element. Features include a live electric field UI, togglable variables, fixed charges, and more.</p>
-            </div>
-          </a>
-          <p class="date">released on 4/3/18</p>
-          <!-- <a class="gh-link" target="_blank" href="https://github.com/noahfiner/dkphoto"><img src="img/social/github.png"/></a> -->
-        </div>
+          <div class="link-outer">
+            <a
+              id="honestlyy"
+              target="_blank"
+              href="https://honestlyy.herokuapp.com/"
+            >
+              <img class="not-loaded" src="img/honestlyy.png" />
+              <div class="info">
+                <h1>honestlyy</h1>
+                <h2>
+                  Answer meaningless questions honestly | <span>GAMING</span>
+                </h2>
+                <hr />
+                <p>
+                  honestlyy is an anonymous survey game. I tried my best to use
+                  PostgreSQL and Ruby on Rails and believe I was successful.
+                </p>
+              </div>
+            </a>
+            <p class="date">released in 2017</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="http://github.com/noahfiner/honestlyy"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="dayandknight" href="https://dkphoto.noahfiner.com/" target="_blank">
-            <img class="not-loaded" src="img/dayknight.png"/>
-            <div class="info">
-              <h1>Day and Knight Photography</h1>
-              <h2>A senior portrait business</h2>
-              <hr>
-              <p>I started Day and Knight Photography, an affordable and professional portrait business and made a sick custom homepage. In the end, I conducted 31 sessions, took 15,000 total photos, and used 450GB of storage.</p>
-            </div>
-          </a>
-          <p class="date">released on 5/17/17</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/dkphoto"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="tuition"
+              href="https://electric-force-sim.noahfiner.com/"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/electric.png" />
+              <div class="info">
+                <h1>Particle Simulation</h1>
+                <h2>
+                  A physics simulation of electric forces | <span>SCHOOL</span>
+                </h2>
+                <hr />
+                <p>
+                  I made a dope electric field simulation using the canvas
+                  element. Features include a live electric field UI, togglable
+                  variables, fixed charges, and more.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 4/3/18</p>
+            <!-- <a class="gh-link" target="_blank" href="https://github.com/noahfiner/dkphoto"><img src="img/social/github.png"/></a> -->
+          </div>
 
-        <div class="link-outer">
-          <a id="sqar" href="https://sqar.noahfiner.com" target="_blank">
-            <img class="not-loaded" src="img/sqar.png"/>
-            <div class="info">
-              <h1>sqar</h1>
-              <h2>An puzzling game with squares | <span>GAMING, INCOMPLETE</span></h2>
-              <hr>
-              <p>Sqar is the sequel to sqr. It breaks if you go to level 51 but shhhh don't tell anyone.</p>
-            </div>
-          </a>
-          <p class="date">release date TBA</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/sqar"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="dayandknight"
+              href="https://dkphoto.noahfiner.com/"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/dayknight.png" />
+              <div class="info">
+                <h1>Day and Knight Photography</h1>
+                <h2>A senior portrait business</h2>
+                <hr />
+                <p>
+                  I started Day and Knight Photography, an affordable and
+                  professional portrait business and made a sick custom
+                  homepage. In the end, I conducted 31 sessions, took 15,000
+                  total photos, and used 450GB of storage.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 5/17/17</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/dkphoto"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="justgothatway" href="https://justgothatway.noahfiner.com/" target="_blank">
-            <img class="not-loaded" src="img/justgothatway.png"/>
-            <div class="info">
-              <h1>Just Go That Way</h1>
-              <h2>It shouldn't be that hard | <span>GAMING</span></h2>
-              <hr>
-              <p>Just Go That Way is a game where you just go that way. Snarky comments included.</p>
-            </div>
-          </a>
-          <p class="date">released on 7/7/16</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/justgothatway"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a id="sqar" href="https://sqar.noahfiner.com" target="_blank">
+              <img class="not-loaded" src="img/sqar.png" />
+              <div class="info">
+                <h1>sqar</h1>
+                <h2>
+                  An puzzling game with squares |
+                  <span>GAMING, INCOMPLETE</span>
+                </h2>
+                <hr />
+                <p>
+                  Sqar is the sequel to sqr. It breaks if you go to level 51 but
+                  shhhh don't tell anyone.
+                </p>
+              </div>
+            </a>
+            <p class="date">release date TBA</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/sqar"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="jackson" href="http://jacksonshonestfoundation.org" target="_blank">
-            <img class="not-loaded" src="img/jackson.png"/>
-            <div class="info">
-              <h1>Jackson's Honest Charitable Foundation</h1>
-              <h2>A landing page for Jackson's Honest's charity | <span>BUSINESS</span></h2>
-              <hr>
-              <p>I was invited by Jackson's Honest chips, a company featured on Shark Tank, to create a website for their charity to help children with rare diseases. Made them a fire page.</p>
-            </div>
-          </a>
-          <p class="date">released on 10/1/17</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/jackson"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="justgothatway"
+              href="https://justgothatway.noahfiner.com/"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/justgothatway.png" />
+              <div class="info">
+                <h1>Just Go That Way</h1>
+                <h2>It shouldn't be that hard | <span>GAMING</span></h2>
+                <hr />
+                <p>
+                  Just Go That Way is a game where you just go that way. Snarky
+                  comments included.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 7/7/16</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/justgothatway"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <!-- <div class="link-outer">
+          <div class="link-outer">
+            <a
+              id="jackson"
+              href="http://jacksonshonestfoundation.org"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/jackson.png" />
+              <div class="info">
+                <h1>Jackson's Honest Charitable Foundation</h1>
+                <h2>
+                  A landing page for Jackson's Honest's charity |
+                  <span>BUSINESS</span>
+                </h2>
+                <hr />
+                <p>
+                  I was invited by Jackson's Honest chips, a company featured on
+                  Shark Tank, to create a website for their charity to help
+                  children with rare diseases. Made them a fire page.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 10/1/17</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/jackson"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
+
+          <!-- <div class="link-outer">
           <a id="robotics" href="http://fairviewrobotics.com" target="_blank">
             <img class="not-loaded" src="img/robotics.png"/>
             <div class="info">
@@ -277,7 +478,7 @@
           <a class="gh-link" target="_blank" href="https://github.com/fairviewrobotics/fairviewrobotics.github.io"><img src="img/social/github.png"/></a>
         </div> -->
 
-        <!-- <div class="link-outer">
+          <!-- <div class="link-outer">
           <a id="joanna" href="http://joannafirst.com" target="_blank">
             <img class="not-loaded" src="img/joanna.png"/>
             <div class="info">
@@ -305,7 +506,7 @@
           <a class="gh-link" target="_blank" href="https://gitlab.com/fairviewellipses/ellipses-rails"><img src="img/social/github.png"/></a>
         </div> -->
 
-        <!-- <div class="link-outer">
+          <!-- <div class="link-outer">
           <a id="map" href="https://fairviewhs.org/map" target="_blank">
             <img class="not-loaded" src="img/map.png"/>
             <div class="info">
@@ -318,116 +519,187 @@
           <p class="date">released on 9/26/15</p>
         </div> -->
 
-        <div class="link-outer">
-          <a id="jhumpa" href="https://jhumpa-simulator.noahfiner.com" target="_blank">
-            <img class="not-loaded" src="img/jhumpa.png"/>
-            <div class="info">
-              <h1>Jhumpa Simulator</h1>
-              <h2>A physcoanalytic LA project | <span>GAMING, OLD</span></h2>
-              <hr>
-              <p>For an LA project on a choice book, in which I chose Jhumpa Lahiri's Intepreter of Maladies, I chose to design a video game. In it, which is confusing out of context, the player takes over Jhumpa's mind as she writes short storeis in her book. Though it's not incredibly fun, it was my first time experimenting with animating static images and learning CSS3 animations.</p>
-            </div>
-          </a>
-          <p class="date">released on 4/28/16</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/Jhumpa-Simulator"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="jhumpa"
+              href="https://jhumpa-simulator.noahfiner.com"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/jhumpa.png" />
+              <div class="info">
+                <h1>Jhumpa Simulator</h1>
+                <h2>A physcoanalytic LA project | <span>GAMING, OLD</span></h2>
+                <hr />
+                <p>
+                  For an LA project on a choice book, in which I chose Jhumpa
+                  Lahiri's Intepreter of Maladies, I chose to design a video
+                  game. In it, which is confusing out of context, the player
+                  takes over Jhumpa's mind as she writes short storeis in her
+                  book. Though it's not incredibly fun, it was my first time
+                  experimenting with animating static images and learning CSS3
+                  animations.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 4/28/16</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/Jhumpa-Simulator"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="kathleen" href="https://kathleen-franco.noahfiner.com/" target="_blank">
-            <img class="not-loaded" src="img/kathleen.png"/>
-            <div class="info">
-              <h1>Kathleen Franco</h1>
-              <h2>An unused website for a mediator and lawyer | <span>BUSINESS, OLD</span></h2>
-              <hr>
-              <p>For Kathleen Franco's professional site, I tried a simple material design to present the information on the site in a clean way. Additionally, I redesigned her logo, created business cards, and designed a cleaner, professional email signature. The site is still in progress as I never received content.</p>
-            </div>
-          </a>
-          <p class="date">release date TBA</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/kathleen-franco"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="kathleen"
+              href="https://kathleen-franco.noahfiner.com/"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/kathleen.png" />
+              <div class="info">
+                <h1>Kathleen Franco</h1>
+                <h2>
+                  An unused website for a mediator and lawyer |
+                  <span>BUSINESS, OLD</span>
+                </h2>
+                <hr />
+                <p>
+                  For Kathleen Franco's professional site, I tried a simple
+                  material design to present the information on the site in a
+                  clean way. Additionally, I redesigned her logo, created
+                  business cards, and designed a cleaner, professional email
+                  signature. The site is still in progress as I never received
+                  content.
+                </p>
+              </div>
+            </a>
+            <p class="date">release date TBA</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/kathleen-franco"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="odyssey" href="https://odyssey-games.noahfiner.com/hub.html" target="_blank">
-            <img class="not-loaded" src="img/odyssey.png"/>
-            <div class="info">
-              <h1>Odyssey Games</h1>
-              <h2>An LA project based on proving Odysseus to not be heroic | <span>GAMING, OLD</span></h2>
-              <hr>
-              <p>For another LA project, I decided to create a video game showing Odysseus not to be heroic. Made with the Photoshop brush tool and pretty yucky code from 10th grade Noah.</p>
-            </div>
-          </a>
-          <p class="date">released on 4/2/15</p>
-          <a class="gh-link" target="_blank" href="https://github.com/noahfiner/Odyssey-Games"><img src="img/social/github.png"/></a>
-        </div>
+          <div class="link-outer">
+            <a
+              id="odyssey"
+              href="https://odyssey-games.noahfiner.com/hub.html"
+              target="_blank"
+            >
+              <img class="not-loaded" src="img/odyssey.png" />
+              <div class="info">
+                <h1>Odyssey Games</h1>
+                <h2>
+                  An LA project based on proving Odysseus to not be heroic |
+                  <span>GAMING, OLD</span>
+                </h2>
+                <hr />
+                <p>
+                  For another LA project, I decided to create a video game
+                  showing Odysseus not to be heroic. Made with the Photoshop
+                  brush tool and pretty yucky code from 10th grade Noah.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 4/2/15</p>
+            <a
+              class="gh-link"
+              target="_blank"
+              href="https://github.com/noahfiner/Odyssey-Games"
+              ><img src="img/social/github.png"
+            /></a>
+          </div>
 
-        <div class="link-outer">
-          <a id="sqr" href="https://sqr.noahfiner.com" target="_blank">
-            <img class="not-loaded" src="img/sqr.png"/>
-            <div class="info">
-              <h1>sqr</h1>
-              <h2>My first game | <span>GAMING, OLD</span></h2>
-              <hr>
-              <p>sqr is probably broken on anything that is not Chrome and has some of the most disgusting code I've written in a long time. But it's kinda fun I guess.</p>
-            </div>
+          <div class="link-outer">
+            <a id="sqr" href="https://sqr.noahfiner.com" target="_blank">
+              <img class="not-loaded" src="img/sqr.png" />
+              <div class="info">
+                <h1>sqr</h1>
+                <h2>My first game | <span>GAMING, OLD</span></h2>
+                <hr />
+                <p>
+                  sqr is probably broken on anything that is not Chrome and has
+                  some of the most disgusting code I've written in a long time.
+                  But it's kinda fun I guess.
+                </p>
+              </div>
+            </a>
+            <p class="date">released on 3/2/15</p>
+          </div>
+        </div>
+      </div>
+      <div id="footer-outer">
+        <div id="footer-name-outer">
+          <a class="local-link l-index">
+            <img class="footer-index" src="img/logo-white.png" />
           </a>
-          <p class="date">released on 3/2/15</p>
+          <div class="footer-vertical-hr"></div>
+          <a class="local-link l-index" id="footer-name">Noah Finer</a>
+        </div>
+        <div id="footer-links">
+          <a class="local-link l-sites">WEBSITES</a>
+          <a class="local-link l-photos">PHOTOS</a>
+          <a class="local-link l-other">RESUME</a>
+        </div>
+        <div class="social-media footer-social">
+          <a href="http://twitter.com/finerflame">
+            <img src="img/social/twitter.png" class="social" />
+          </a>
+          <a href="http://instagram.com/noahfiner">
+            <img src="img/social/instagram.png" class="social" />
+          </a>
+          <a href="http://github.com/noahfiner">
+            <img src="img/social/github.png" class="social" />
+          </a>
+          <a href="mailto:noahfiner@gmail.com">
+            <img src="img/social/mail.png" class="social" />
+          </a>
         </div>
       </div>
     </div>
-    <div id="footer-outer">
-      <div id="footer-name-outer">
-        <a class="local-link l-index">
-          <img class="footer-index" src="img/logo-white.png"/>
-        </a>
-        <div class="footer-vertical-hr"></div>
-        <a class="local-link l-index" id="footer-name">Noah Finer</a>
-      </div>
-      <div id="footer-links">
-        <a class="local-link l-sites">WEBSITES</a>
-        <a class="local-link l-photos">PHOTOS</a>
-        <a class="local-link l-other">RESUME</a>
-      </div>
-      <div class="social-media footer-social">
-        <a href="http://twitter.com/finerflame">
-          <img src="img/social/twitter.png" class="social"/>
-        </a>
-        <a href="http://instagram.com/noahfiner">
-          <img src="img/social/instagram.png" class="social"/>
-        </a>
-        <a href="http://github.com/noahfiner">
-          <img src="img/social/github.png" class="social"/>
-        </a>
-        <a href="mailto:noahfiner@gmail.com">
-          <img src="img/social/mail.png" class="social"/>
-        </a>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    var images = new Array()
-    function preload() {
-      for (i = 0; i < preload.arguments.length; i++) {
-        images[i] = new Image()
-        images[i].src = preload.arguments[i]
+    <script type="text/javascript">
+      var images = new Array();
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image();
+          images[i].src = preload.arguments[i];
+        }
       }
-    }
-    preload("img/justgothatway.png",
-            "img/multitaskilus.png",
-            "img/jhumpa.png",
-            "img/odyssey.png",
-            "img/sqar.png",
-            "img/sqr.png"
-          )
-  </script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      preload(
+        "img/justgothatway.png",
+        "img/multitaskilus.png",
+        "img/jhumpa.png",
+        "img/odyssey.png",
+        "img/sqar.png",
+        "img/sqr.png"
+      );
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-  ga('create', 'UA-59921773-7', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
+      ga("create", "UA-59921773-7", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>

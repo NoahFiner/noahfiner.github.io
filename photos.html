@@ -1,118 +1,160 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Noah Finer - Photos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link type="text/css" rel="stylesheet" href="style.css"/>
-  <meta name="description" content="The portfolio site for Noah Finer, including web games, websites, and astro/landscape/abstract/macro photography."/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="gallery.js"></script>
-  <script src="script.js"></script>
-</head>
-<body>
-  <div id="everything">
-    <div id="loading-outer">
-      <div id="loading-back"></div>
-      <div id="loading-main" class="photos"></div>
-    </div>
-    <div id="header">
-      <div id="info">
-        <a class="local-link l-index" id="index">
-          <img src="img/logo.png" id="logo"/>
-        </a>
-        <div id="vertical-hr"></div>
-        <div id="name-inner">
-          <a class="local-link l-index" id="name">Noah Finer</a>
-          <div class="social-media">
-            <a href="http://twitter.com/finerflame">
-              <img src="img/social/twitter.png" class="social"/>
-            </a>
-            <a href="http://instagram.com/noahfiner">
-              <img src="img/social/instagram.png" class="social"/>
-            </a>
-            <!-- <a href="https://www.youtube.com/channel/UC0Ac7aSlxIj-xx6Ng4U0A4g">
+  <head>
+    <title>Noah Finer - Photos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="The portfolio site for Noah Finer, including web games, websites, and astro/landscape/abstract/macro photography."
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="gallery.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="everything">
+      <div id="loading-outer">
+        <div id="loading-back"></div>
+        <div id="loading-main" class="photos"></div>
+      </div>
+      <div id="header">
+        <div id="info">
+          <a class="local-link l-index" id="index">
+            <img src="img/logo.png" id="logo" />
+          </a>
+          <div id="vertical-hr"></div>
+          <div id="name-inner">
+            <a class="local-link l-index" id="name">Noah Finer</a>
+            <div class="social-media">
+              <a href="http://twitter.com/finerflame">
+                <img src="img/social/twitter.png" class="social" />
+              </a>
+              <a href="http://instagram.com/noahfiner">
+                <img src="img/social/instagram.png" class="social" />
+              </a>
+              <!-- <a href="https://www.youtube.com/channel/UC0Ac7aSlxIj-xx6Ng4U0A4g">
               <img src="img/social/youtube.png" class="social"/>
             </a> -->
-            <a href="http://github.com/noahfiner">
-              <img src="img/social/github.png" class="social"/>
-            </a>
-            <a href="mailto:noahfiner@gmail.com">
-              <img src="img/social/mail.png" class="social"/>
-            </a>
+              <a href="http://github.com/noahfiner">
+                <img src="img/social/github.png" class="social" />
+              </a>
+              <a href="mailto:noahfiner@gmail.com">
+                <img src="img/social/mail.png" class="social" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="header-links">
+          <!-- <a class="local-link l-games" id="games">GAMES</a> -->
+          <a class="local-link l-sites" id="sites">WEBSITES</a>
+          <a class="local-link l-photos" id="photos">PHOTOS</a>
+          <a class="local-link l-other" id="other">RESUME</a>
+        </div>
+        <div id="hamburger-outer">
+          <div style="height: 100%; width: 100%; position: relative;">
+            <div id="hamburger1" class="hamburger"></div>
+            <div id="hamburger2" class="hamburger"></div>
+            <div id="hamburger3" class="hamburger"></div>
           </div>
         </div>
       </div>
-      <div id="header-links">
-        <!-- <a class="local-link l-games" id="games">GAMES</a> -->
-        <a class="local-link l-sites" id="sites">WEBSITES</a>
-        <a class="local-link l-photos" id="photos">PHOTOS</a>
-        <a class="local-link l-other" id="other">RESUME</a>
+      <div id="image-full-outer" class="hidden">
+        <a id="image-full-close" onclick="showImage('', false)">CLOSE</a>
+        <a id="image-full-left" class="full-arrow" onclick="decrementImage()"
+          >&lang;</a
+        >
+        <a id="image-full-right" class="full-arrow" onclick="incrementImage()"
+          >&rang;</a
+        >
+        <img src="photography/loading.jpg" class="image-full" />
       </div>
-      <div id="hamburger-outer">
-        <div style="height: 100%; width: 100%; position: relative">
-          <div id="hamburger1" class="hamburger"></div>
-          <div id="hamburger2" class="hamburger"></div>
-          <div id="hamburger3" class="hamburger"></div>
+      <div id="content">
+        <div id="content-inner">
+          <h1>PHOTOS</h1>
+          <p>
+            On top of coding I'm pretty serious about photography. I like doing
+            landscape stuff but also do astro, macro, etc.
+          </p>
+          <p>
+            I usually post cool pictures on Instagram at
+            <a class="pretty-link" href="http://instagram.com/noahfiner"
+              >@noahfiner</a
+            >. I also post cool pictures of lizards at
+            <a class="pretty-link" href="http://instagram.com/spiky1and2"
+              >@spiky1and2</a
+            >. I post cool pictures of people on my senior portrait business's
+            account,
+            <a class="pretty-link" href="https://instagram.com/dayknightphoto"
+              >@dayknightphoto</a
+            >.
+          </p>
+          <p>
+            Do you want me to take cool pictures of you or maybe edit your cool
+            picures?
+            <a class="pretty-link" href="mailto:noahfiner@gmail.com"
+              >Contact me here!</a
+            >
+          </p>
+          <div id="gallery-header">
+            <a class="gallery-selector selected" id="all-photos">all photos</a>
+          </div>
+          <div id="gallery-content"></div>
+        </div>
+      </div>
+      <div id="footer-outer">
+        <div id="footer-name-outer">
+          <a class="local-link l-index">
+            <img class="footer-index" src="img/logo-white.png" />
+          </a>
+          <div class="footer-vertical-hr"></div>
+          <a class="local-link l-index" id="footer-name">Noah Finer</a>
+        </div>
+        <div id="footer-links">
+          <a class="local-link l-sites">WEBSITES</a>
+          <a class="local-link l-photos">PHOTOS</a>
+          <a class="local-link l-other">RESUME</a>
+        </div>
+        <div class="social-media footer-social">
+          <a href="http://twitter.com/finerflame">
+            <img src="img/social/twitter.png" class="social" />
+          </a>
+          <a href="http://instagram.com/noahfiner">
+            <img src="img/social/instagram.png" class="social" />
+          </a>
+          <a href="http://github.com/noahfiner">
+            <img src="img/social/github.png" class="social" />
+          </a>
+          <a href="mailto:noahfiner@gmail.com">
+            <img src="img/social/mail.png" class="social" />
+          </a>
         </div>
       </div>
     </div>
-    <div id="image-full-outer" class="hidden">
-      <a id="image-full-close" onclick="showImage('', false)">CLOSE</a>
-      <a id="image-full-left" class="full-arrow" onclick="decrementImage()">&lang;</a>
-      <a id="image-full-right" class="full-arrow" onclick="incrementImage()">&rang;</a>
-      <img src="photography/loading.jpg" class="image-full"/>
-    </div>
-    <div id="content">
-      <div id="content-inner">
-        <h1>PHOTOS</h1>
-        <p>On top of coding I'm pretty serious about photography. I like doing landscape stuff but also do astro, macro, etc.</p>
-        <p>I usually post cool pictures on Instagram at <a class="pretty-link" href="http://instagram.com/noahfiner">@noahfiner</a>. I also post cool pictures of lizards at <a class="pretty-link" href="http://instagram.com/spiky1and2">@spiky1and2</a>. I post cool pictures of people on my senior portrait business's account, <a class="pretty-link" href="https://instagram.com/dayknightphoto">@dayknightphoto</a>.</p>
-        <p>Do you want me to take cool pictures of you or maybe edit your cool picures? <a class="pretty-link" href="mailto:noahfiner@gmail.com">Contact me here!</a></p>
-        <div id="gallery-header">
-          <a class="gallery-selector selected" id="all-photos">all photos</a>
-        </div>
-        <div id="gallery-content"></div>
-      </div>
-    </div>
-    <div id="footer-outer">
-      <div id="footer-name-outer">
-        <a class="local-link l-index">
-          <img class="footer-index" src="img/logo-white.png"/>
-        </a>
-        <div class="footer-vertical-hr"></div>
-        <a class="local-link l-index" id="footer-name">Noah Finer</a>
-      </div>
-      <div id="footer-links">
-        <a class="local-link l-sites">WEBSITES</a>
-        <a class="local-link l-photos">PHOTOS</a>
-        <a class="local-link l-other">RESUME</a>
-      </div>
-      <div class="social-media footer-social">
-        <a href="http://twitter.com/finerflame">
-          <img src="img/social/twitter.png" class="social"/>
-        </a>
-        <a href="http://instagram.com/noahfiner">
-          <img src="img/social/instagram.png" class="social"/>
-        </a>
-        <a href="http://github.com/noahfiner">
-          <img src="img/social/github.png" class="social"/>
-        </a>
-        <a href="mailto:noahfiner@gmail.com">
-          <img src="img/social/mail.png" class="social"/>
-        </a>
-      </div>
-    </div>
-  </div>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-  ga('create', 'UA-59921773-7', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
+      ga("create", "UA-59921773-7", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>

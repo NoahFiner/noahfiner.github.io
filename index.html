@@ -1,187 +1,323 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Noah Finer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link type="text/css" rel="stylesheet" href="style.css"/>
-  <meta name="description" content="The portfolio site for Noah Finer, including web games, websites, and astro/landscape/abstract/macro photography."/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="script.js"></script>
-</head>
-<body class="loading">
-  <div id="everything">
-    <div id="loading-outer">
-      <div id="loading-back"></div>
-      <div id="loading-main" class="index"></div>
-    </div>
-    <div id="header">
-      <div id="info">
-        <a class="local-link l-index" id="index">
-          <img src="img/logo.png" id="logo"/>
-        </a>
-        <div id="vertical-hr"></div>
-        <div id="name-inner">
-          <a class="local-link l-index" id="name">Noah Finer</a>
-          <div class="social-media">
-            <a href="http://twitter.com/finerflame">
-              <img src="img/social/twitter.png" class="social"/>
-            </a>
-            <a href="http://instagram.com/noahfiner">
-              <img src="img/social/instagram.png" class="social"/>
-            </a>
-            <!-- <a href="https://www.youtube.com/channel/UC0Ac7aSlxIj-xx6Ng4U0A4g">
+  <head>
+    <title>Noah Finer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="The portfolio site for Noah Finer, including web games, websites, and astro/landscape/abstract/macro photography."
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="loading">
+    <div id="everything">
+      <div id="loading-outer">
+        <div id="loading-back"></div>
+        <div id="loading-main" class="index"></div>
+      </div>
+      <div id="header">
+        <div id="info">
+          <a class="local-link l-index" id="index">
+            <img src="img/logo.png" id="logo" />
+          </a>
+          <div id="vertical-hr"></div>
+          <div id="name-inner">
+            <a class="local-link l-index" id="name">Noah Finer</a>
+            <div class="social-media">
+              <a href="http://twitter.com/finerflame">
+                <img src="img/social/twitter.png" class="social" />
+              </a>
+              <a href="http://instagram.com/noahfiner">
+                <img src="img/social/instagram.png" class="social" />
+              </a>
+              <!-- <a href="https://www.youtube.com/channel/UC0Ac7aSlxIj-xx6Ng4U0A4g">
               <img src="img/social/youtube.png" class="social"/>
             </a> -->
-            <a href="http://github.com/noahfiner">
-              <img src="img/social/github.png" class="social"/>
-            </a>
-            <a href="mailto:noahfiner@gmail.com">
-              <img src="img/social/mail.png" class="social"/>
-            </a>
+              <a href="http://github.com/noahfiner">
+                <img src="img/social/github.png" class="social" />
+              </a>
+              <a href="mailto:noahfiner@gmail.com">
+                <img src="img/social/mail.png" class="social" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="header-links">
+          <!-- <a class="local-link l-games" id="games">GAMES</a> -->
+          <a class="local-link l-sites" id="sites">WEBSITES</a>
+          <a class="local-link l-photos" id="photos">PHOTOS</a>
+          <a class="local-link l-other" id="other">RESUME</a>
+        </div>
+        <div id="hamburger-outer">
+          <div style="height: 100%; width: 100%; position: relative;">
+            <div id="hamburger1" class="hamburger"></div>
+            <div id="hamburger2" class="hamburger"></div>
+            <div id="hamburger3" class="hamburger"></div>
           </div>
         </div>
       </div>
-      <div id="header-links">
-        <!-- <a class="local-link l-games" id="games">GAMES</a> -->
-        <a class="local-link l-sites" id="sites">WEBSITES</a>
-        <a class="local-link l-photos" id="photos">PHOTOS</a>
-        <a class="local-link l-other" id="other">RESUME</a>
+      <div id="content">
+        <div id="scrollers-outer">
+          <div style="height: 100%; width: 100%; position: absolute;">
+            <p id="scroll-up">&#x2303;</p>
+            <p id="scroll-down">&#x2303;</p>
+          </div>
+        </div>
+        <div id="parallax-background"></div>
+        <div id="parallax-mask"></div>
+        <div id="text-content" class="intro">
+          <div id="parallax-back1" class="parallax-back"></div>
+          <div id="parallax-back2" class="parallax-back"></div>
+          <div id="parallax-back3" class="parallax-back"></div>
+          <div class="intro-section">
+            <h1 style="margin-top: 100px;">I'm Noah Finer</h1>
+            <p>Nice to meet you!</p>
+            <p>
+              I code
+              <a class="pretty-intro-link local-link l-sites">stuff</a> for
+              Stripe, startups, and myself.
+            </p>
+            <p>
+              I take cool
+              <a class="pretty-intro-link local-link l-photos">pictures</a>.
+            </p>
+            <p>Scroll down to check those out.</p>
+            <p>
+              Or if you're in a rush check out
+              <a
+                class="pretty-intro-link"
+                href="https://drive.google.com/file/d/1PbSvZeXxp6lIZ7zxf2GI0crARoXZgGKC/view?usp=sharing"
+                target="_blank"
+                >my resume here</a
+              >.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h1>What I do</h1>
+            <p>
+              I make
+              <a class="pretty-intro-link local-link l-sites"
+                >websites, projects, and games</a
+              >.
+            </p>
+            <p>
+              I moved money at
+              <a
+                class="pretty-intro-link"
+                href="https://productiv.com"
+                target="_blank"
+                >Stripe</a
+              >, scaled
+              <a
+                class="pretty-intro-link"
+                href="https://chimemenu.com"
+                target="_blank"
+                >Chime Menu,</a
+              >
+            </p>
+            <p>
+              and visualized data at
+              <a
+                class="pretty-intro-link"
+                href="https://productiv.com"
+                target="_blank"
+                >Productiv</a
+              >.
+            </p>
+            <p>
+              I help students learn how to learn at
+              <a
+                class="pretty-intro-link"
+                href="https://shiftcreator.space"
+                target="_blank"
+                >Shift</a
+              >.
+            </p>
+            <p>
+              I do some other things too, like
+              <a
+                class="pretty-intro-link"
+                href="https://drive.google.com/drive/folders/1Upwrob6_3kJa2xbnM5d8HzQmANOOWBgC?usp=sharing"
+                >design</a
+              >
+              and <a class="pretty-intro-link local-link l-photos">photos</a>.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h1>Websites</h1>
+            <p>
+              I've done a lot of semi-viral
+              <a class="pretty-intro-link local-link l-sites">projects</a>, some
+              successful others not.
+            </p>
+            <p>
+              I recently made the internet write stories together at
+              <a class="pretty-intro-link" href="https://weword.co">WeWord</a>.
+            </p>
+            <p>
+              You can
+              <a class="pretty-intro-link" href="mailto:noahfiner@gmail.com">
+                contact me</a
+              >
+              if you would like me to make you something.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h1>Photos</h1>
+            <p>I also have a camera</p>
+            <p>
+              and I take a lot of
+              <a class="pretty-intro-link local-link l-photos">photos</a>.
+            </p>
+            <p>
+              You can
+              <a class="pretty-intro-link" href="mailto:noahfiner@gmail.com">
+                contact me</a
+              >
+              if you would like me to print one for you.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h1>Other Things</h1>
+            <p>I do other stuff also.</p>
+            <p>Like co-directing a creator space, rapping, and journalism.</p>
+            <p>
+              See more <a class="pretty-intro-link" href="other.html">here</a>.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h1>Lizards</h1>
+            <p>I have two lizards that are both named Spiky.</p>
+            <p>This is Spiky1 (RIP). He was a ten-year-old bearded dragon.</p>
+            <p>
+              He makes up half of
+              <a
+                class="pretty-intro-link"
+                href="http://instagram.com/spiky1and2"
+                >@spiky1and2</a
+              >.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h1>Lizards (cont.)</h1>
+            <p>Here is Spiky2.</p>
+            <p>Spiky2 is a crested gecko of around eleven years.</p>
+            <p>He is a good bit smaller than Spiky1.</p>
+            <p>
+              He makes up the other half of
+              <a
+                class="pretty-intro-link"
+                href="http://instagram.com/spiky1and2"
+                >@spiky1and2</a
+              >.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h1>Support</h1>
+            <p>Hey, if you like my stuff</p>
+            <p>
+              consider following me on
+              <a class="pretty-intro-link" href="http://twitter.com/finerflame"
+                >Twitter</a
+              >
+            </p>
+            <p>
+              or check out my Instagram photos at (<a
+                class="pretty-intro-link"
+                href="http://instagram.com/noahfiner"
+                >@noahfiner</a
+              >)
+            </p>
+            <p>
+              or my lizards at (<a
+                class="pretty-intro-link"
+                href="http://instagram.com/spiky1and2"
+                >@spiky1and2</a
+              >).
+            </p>
+            <p>
+              You can also
+              <a class="pretty-intro-link" href="mailto:noahfiner@gmail.com"
+                >hit me up</a
+              >.
+            </p>
+          </div>
+        </div>
       </div>
-      <div id="hamburger-outer">
-        <div style="height: 100%; width: 100%; position: relative">
-          <div id="hamburger1" class="hamburger"></div>
-          <div id="hamburger2" class="hamburger"></div>
-          <div id="hamburger3" class="hamburger"></div>
+      <div id="footer-outer">
+        <div id="footer-name-outer">
+          <a class="local-link l-index">
+            <img class="footer-index" src="img/logo-white.png" />
+          </a>
+          <div class="footer-vertical-hr"></div>
+          <a class="local-link l-index" id="footer-name">Noah Finer</a>
+        </div>
+        <div id="footer-links">
+          <a class="local-link l-sites">WEBSITES</a>
+          <a class="local-link l-photos">PHOTOS</a>
+          <a class="local-link l-other">RESUME</a>
+        </div>
+        <div class="social-media footer-social">
+          <a href="http://twitter.com/finerflame">
+            <img src="img/social/twitter.png" class="social" />
+          </a>
+          <a href="http://instagram.com/noahfiner">
+            <img src="img/social/instagram.png" class="social" />
+          </a>
+          <a href="http://github.com/noahfiner">
+            <img src="img/social/github.png" class="social" />
+          </a>
+          <a href="mailto:noahfiner@gmail.com">
+            <img src="img/social/mail.png" class="social" />
+          </a>
         </div>
       </div>
     </div>
-    <div id="content">
-      <div id="scrollers-outer">
-        <div style="height: 100%; width: 100%; position: absolute">
-          <p id="scroll-up">&#x2303;</p>
-          <p id="scroll-down">&#x2303;</p>
-        </div>
-      </div>
-      <div id="parallax-background"></div>
-      <div id="parallax-mask"></div>
-      <div id="text-content" class="intro">
-        <div id="parallax-back1" class="parallax-back"></div>
-        <div id="parallax-back2" class="parallax-back"></div>
-        <div id="parallax-back3" class="parallax-back"></div>
-        <div class="intro-section">
-          <h1 style="margin-top: 100px">I'm Noah Finer</h1>
-          <p>Nice to meet you!</p>
-          <p>I code <a class="pretty-intro-link local-link l-sites">stuff</a>.</p>
-          <p>I take cool <a class="pretty-intro-link local-link l-photos">pictures</a>.</p>
-          <p>Scroll down to check those out.</p>
-          <p>Or if you're in a rush check out <a class="pretty-intro-link" href="https://drive.google.com/file/d/1OOLBzCcFJJZLGOYs4wFz_zyOSwJm7hcy/view?usp=sharing" target="_blank">my resume here</a>.</p>
-        </div>
-        <div class="intro-section">
-          <h1>What I do</h1>
-          <p>I make <a class="pretty-intro-link local-link l-sites">websites, projects, and games</a>.</p>
-          <p>I interned at <a class="pretty-intro-link" href="https://productiv.com" target="_blank">Productiv</a> and made venn diagrams.</p>
-          <p>I do some other things too, like <a class="pretty-intro-link" href="https://drive.google.com/drive/folders/1Upwrob6_3kJa2xbnM5d8HzQmANOOWBgC?usp=sharing">design</a> and <a class="pretty-intro-link local-link l-photos">photos</a>.</p>
-          <p>Scroll down to learn even more.</p>
-        </div>
-        <div class="intro-section">
-          <h1>Websites</h1>
-          <p>I've done a lot of <a class="pretty-intro-link local-link l-sites">projects</a>, like games and websites.</p>
-          <p>I'm currently working on <a class="pretty-intro-link" href="https://weword.co">WeWord</a>.</p>
-          <p>You can <a class="pretty-intro-link" href="mailto:noahfiner@gmail.com"> contact me</a> if you would like me to make you something.</p>
-        </div>
-        <div class="intro-section">
-          <h1>Photos</h1>
-          <p>I also have a camera</p>
-          <p>and I take a lot of <a class="pretty-intro-link local-link l-photos">photos</a>.</p>
-          <p>You can <a class="pretty-intro-link" href="mailto:noahfiner@gmail.com"> contact me</a> if you would like me to print one for you.</p>
-        </div>
-        <div class="intro-section">
-          <h1>Other Things</h1>
-          <p>I do other stuff also.</p>
-          <p>Like co-directing a creator space, rapping, and journalism.</p>
-          <p>See more <a class="pretty-intro-link" href="other.html">here</a>.</p>
-        </div>
-        <div class="intro-section">
-          <h1>Lizards</h1>
-          <p>I have two lizards that are both named Spiky.</p>
-          <p>This is Spiky1. He's an eight-year-old bearded dragon.</p>
-          <p>He makes up half of <a class="pretty-intro-link" href="http://instagram.com/spiky1and2">@spiky1and2</a>.</p>
-        </div>
-        <div class="intro-section">
-          <h1>Lizards (cont.)</h1>
-          <p>Here is Spiky2.</p>
-          <p>Spiky2 is a crested gecko of around nine years.</p>
-          <p>He is a good bit smaller than Spiky1.</p>
-          <p>He makes up the other half of <a class="pretty-intro-link" href="http://instagram.com/spiky1and2">@spiky1and2</a>.</p>
-        </div>
-        <div class="intro-section">
-          <h1>Support</h1>
-          <p>Hey, if you like my stuff</p>
-          <p>consider following me on <a class="pretty-intro-link" href="http://twitter.com/finerflame">Twitter</a></p>
-          <p>or check out my Instagram photos at (<a class="pretty-intro-link" href="http://instagram.com/noahfiner">@noahfiner</a>)</p>
-          <p>or my lizards at (<a class="pretty-intro-link" href="http://instagram.com/spiky1and2">@spiky1and2</a>).</p>
-          <p>You can also <a class="pretty-intro-link" href="mailto:noahfiner@gmail.com">say waddup (aka contact me)</a>.</p>
-        </div>
-      </div>
-    </div>
-    <div id="footer-outer">
-      <div id="footer-name-outer">
-        <a class="local-link l-index">
-          <img class="footer-index" src="img/logo-white.png"/>
-        </a>
-        <div class="footer-vertical-hr"></div>
-        <a class="local-link l-index" id="footer-name">Noah Finer</a>
-      </div>
-      <div id="footer-links">
-        <a class="local-link l-sites">WEBSITES</a>
-        <a class="local-link l-photos">PHOTOS</a>
-        <a class="local-link l-other">RESUME</a>
-      </div>
-      <div class="social-media footer-social">
-        <a href="http://twitter.com/finerflame">
-          <img src="img/social/twitter.png" class="social"/>
-        </a>
-        <a href="http://instagram.com/noahfiner">
-          <img src="img/social/instagram.png" class="social"/>
-        </a>
-        <a href="http://github.com/noahfiner">
-          <img src="img/social/github.png" class="social"/>
-        </a>
-        <a href="mailto:noahfiner@gmail.com">
-          <img src="img/social/mail.png" class="social"/>
-        </a>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    var images = new Array()
-    function preload() {
-      for (i = 0; i < preload.arguments.length; i++) {
-        images[i] = new Image()
-        images[i].src = preload.arguments[i]
+    <script type="text/javascript">
+      var images = new Array();
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image();
+          images[i].src = preload.arguments[i];
+        }
       }
-    }
-    preload(
-      "photography/intro1.jpg",
-      "photography/intro2.jpg",
-      "photography/intro3.jpg",
-      "photography/intro4.jpg",
-      "photography/intro5.jpg",
-      "photography/intro6.jpg",
-      "photography/intro7.jpg",
-      "photography/intro8.jpg"
-      )
-  </script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      preload(
+        "photography/intro1.jpg",
+        "photography/intro2.jpg",
+        "photography/intro3.jpg",
+        "photography/intro4.jpg",
+        "photography/intro5.jpg",
+        "photography/intro6.jpg",
+        "photography/intro7.jpg",
+        "photography/intro8.jpg"
+      );
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-  ga('create', 'UA-59921773-7', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
+      ga("create", "UA-59921773-7", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>
